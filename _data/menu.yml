@@ -1,0 +1,94 @@
+top:
+  - link: "pirati.cz"
+    url:  "https://www.pirati.cz"
+    icon: "fa fa-home"
+  - link: "Piráti a Starostové - volby do PSP ČR 2021"
+    url:  "http://www.piratiastarostove.cz"
+    icon: "fa fa-newspaper-o"
+
+main:
+  - link: /aktuality/
+    name: AKTUALITY
+    match: aktuality
+  - link: /lide/
+    name: LIDÉ
+    match: lide
+  - link: /priority/
+    name: PROGRAM DOPRAVA
+    match: priority
+  - link: /obory/
+    name: OBORY
+    match: obory
+    submenu:
+      - link: /obory/drazni/
+        name: Drážní doprava
+        match: drazni
+      - link: /obory/letecka/
+        name: Letecká doprava
+        match: letecka
+      - link: /obory/silnicni/
+        name: Silniční doprava
+        match: silnicni
+      - link: /obory/vodni/
+        name: Vodní doprava
+        match: vodni
+      - link: /obory/mestska/
+        name: Městská doprava
+        match: městská
+  - link: /tema/
+    name: TÉMATA
+    match: tema
+    submenu:
+      - link: /tema/vrt/
+        name: Vysokorychlostní železnice
+        match: vrt
+      - link: /tema/letiste/
+        name: Letiště v ČR
+        match: letiste
+      - link: /tema/dalnice/
+        name: Dálniční síť
+        match: dalnice	
+      - link: /tema/vesmir/
+        name: Vesmírná doprava
+        match: vesmir
+      - link: /tema/ekologie/
+        name: Ekologie v dopravě
+        match: ekologie 
+      - link: /tema/elektro/
+        name: Elektromobilita
+        match: elektro
+      - link: /tema/dol
+        name: Dunaj-Odra-Labe
+        match: dol
+      - link: /tema/vhd
+        name: Veřejná hromadná doprava
+        match: vhd
+      - link: /tema/cyklo
+        name: Cyklodoprava
+        match: cyklo
+bottom:
+  - class: small-12 medium-4
+    title: Připoj se
+    links:
+      - link: /kontakt/
+        name: Dej nám vědět
+  - class: small-12 medium-4
+    title: Makáme
+    links:
+      - link: https://www.piratiastarostove.cz
+        name: www.piratiastarostove.cz
+      - link: /obory/
+        name: Obory
+      - link: /tema/
+        name: Témata
+      - link: /priority/
+        name: Priority		
+  - class: small-12 medium-4
+    title: Otevřenost
+    links:
+      - link: https://ucet.pirati.cz
+        name: Transparentní účet
+      - link: https://smlouvy.pirati.cz
+        name: Registr smluv
+      - link: https://wiki.pirati.cz/fo/otevrene_ucetnictvi
+        name: Otevřené účetnictví

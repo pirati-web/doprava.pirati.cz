@@ -1,0 +1,130 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.3;
+    font-size: 16px;
+    color: #0a0a0a;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a:link {    /* unvisited link */
+    color: #ADADAD;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited {    /* visited link */
+    text-decoration: none;  
+    color: #ADADAD;
+}
+a:hover {    /* mouse over link */
+    text-decoration: underline;  
+    border-bottom: none;
+    color: #ADADAD;  
+}
+a:active {    /* active link */
+    color: #777777;
+}
+
+.main-menu {
+    background-color: #f8f9fa;
+    margin-bottom: 20px
+}
+
+.main-menu .nav-link {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    transition: color 0.2s;
+    color: #343434;
+}
+
+.program-logo {
+    height: 60px;
+    float: right;
+}
+
+.main-logo {
+    width: 95%;
+    margin: 6px;
+}
+
+.program-element-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invert {
+    color: #fefefe;
+    background: #0a0a0a;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+.invert a:link {    /* unvisited link */
+    color: #ADADAD;
+    text-decoration: none;
+    font-weight: bold;
+}
+.invert a:visited {    /* visited link */
+    text-decoration: none;  
+    color: #ADADAD;
+}
+.invert a:hover {    /* mouse over link */
+    text-decoration: underline;  
+    border-bottom: none;
+    color: #ADADAD;  
+}
+.invert a:active {    /* active link */
+    color: #777777;
+}
+
+
+
+.program-items li {
+    padding-bottom: 10px;
+}
+
+.fa-check {
+    font-size: 20px;
+    color: green;
+}
+
+.fa-times {
+    font-size: 20px;
+    color: #b01030;
+}
+
+#source li {
+    padding-bottom: 5px;
+}
+
+.c-top-bar {
+  margin-bottom: 20px;
+}
+
+#spread-chart-container {
+    max-width: 100%;
+    height: 420px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+    #spread-chart-container {
+        height: 300px;
+    }
+}
+@media (max-width: 400px) {
+    #spread-chart-container {
+        height: 200px;
+    }
+}
+© 2021 GitHub, Inc.

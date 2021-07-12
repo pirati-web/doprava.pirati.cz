@@ -1,0 +1,13 @@
+.navbar-toggleable-sm {list-style-type:none;}
+.navbar-toggleable-sm li a {float:left;}
+.navbar-toggleable-sm li a img {height:2rem !important;}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 1023px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}

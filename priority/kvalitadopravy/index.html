@@ -1,0 +1,489 @@
+---
+layout: default
+title:  Priority v dopravě - Kvalita - Kvalitně připravené stavby, opravy a vedení 
+description: Priority v dopravě - Kvalita - Kvalitně připravené stavby, opravy a vedení
+keywords: Priority v dopravě, Kvalita v dopravě, Kvalitně připravené stavby, opravy a vedení
+---
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-180.png" sizes="180x180">
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-120.png" sizes="120x120">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styleguide.min.css">
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styles.css">
+  <style type="text/css">
+    sup {
+      white-space: nowrap;
+    }
+    .head-alt-highlighted {
+      line-height: 1.2 !important;
+    }
+  </style>
+
+ 
+<div class="side-cta-panel--filter" id="side-cta-filter"></div>
+
+<div class="side-cta-panel-bar-wrapper">
+  <div class="side-cta-panel-bar" id="cta-side-bar" onclick="document.body.classList.add('ctaopen');getElementById('side-cta-filter').classList.add('side-cta-panel--filter--ctaopen');getElementById('cta-side').classList.add('side-cta-panel--ctaopen');">
+    <div class="side-cta-panel-bar--toggler"></div>
+    <div class="side-cta-panel-bar-el img-news bg-acidgreen elevation-6 hover:bg-darkacidgreen hover:elevation-1 transition-all cursor-pointer"></div>
+    <div class="side-cta-panel-bar-el img-help bg-lemon elevation-6 hover:bg-opacity-70 hover:elevation-1 transition-all cursor-pointer"></div>
+    <div class="side-cta-panel-bar-el img-support bg-white elevation-6 hover:bg-opacity-70 hover:elevation-1 transition-all cursor-pointer"></div>
+  </div>
+</div>
+
+    
+<div class="container container-default pt-4 pb-20">
+  <div class="w-full lg:w-4/6 relative container-collapsible">
+
+    <div class="floating-nav-wrapper hidden xl:block" id="floatingNavBarWrapper">
+      <div class="floating-nav-panel " id="floatingNavBar">
+        <div class="opener py-6 pb-16 px-11 bg-acidgreen text-white font-alt">
+          RYCHLÁ NAVIGACE
+        </div>
+        <div class="inner float-panel-inner elevation-2">
+          <ul>
+            <li><a href="#takhle-to-dal-nejde">Takhle to dál nejde</a></li>
+            <li><a href="#v-cem-je-problem">V čem je problém</a></li>
+            <li><a href="#nase-vize">Naše vize</a></li>
+            <li><a href="#jak-to-chceme-udelat" class="active">Jak to chceme udělat?</a></li>
+            <li><a href="#kolik-na-to-chceme-casu">Kolik na to chceme času?</a></li>
+            
+              <li><a href="#pro-koho-to-chceme-hlavne">Pro koho to chceme hlavně</a></li>
+            
+            <li><a href="#co-pro-to-uz-delame">Co pro to už děláme</a></li>
+            <li><a href="#na-co-se-nas-casto-ptate">Na co se nás často ptáte</a></li>
+            
+              <li><a href="#souvisejici-body">Související body</a></li>
+            
+            <li><a href="#zdroje">Klidně si to ověřte</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", onLoadFunction);
+      var anchorsArray = [];
+
+      function placeUponId(id, space) {
+        return document.getElementById(id).getBoundingClientRect().top + window.scrollY - space;
+      }
+
+      function onLoadFunction(e) {
+        var anchorElemsArray;
+        onResizeFunction();
+        for (const entry of anchorsArray) {
+          entry.menuitem.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+          e.preventDefault();
+          var id = this.getAttribute("href").replace("#", "");
+          console.log(placeUponId(id, 20));
+          scroll({
+            top: placeUponId(id, 20),
+            behavior: "smooth"
+          });
+        }
+
+
+        window.addEventListener("resize", onResizeFunction);
+      }
+
+      function onResizeFunction(e) {
+        var itemsProcessed = 0;
+        var anchorElemsArray = document.getElementsByClassName("float-panel-inner")[0].querySelectorAll("li a");
+        anchorsArray = [];
+        anchorElemsArray.forEach(function(entry) {
+          var id = entry.getAttribute("href").replace("#", "");
+          anchorsArray.push({
+            id: id,
+            top: placeUponId(id, 200),
+            menuitem: entry
+          });
+          itemsProcessed++;
+          if (itemsProcessed === anchorElemsArray.length) {
+            anchorsArray.reverse();
+          }
+        });
+        console.log(anchorsArray);
+      }
+      window.onscroll = function() {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        var activereached = false;
+        anchorsArray.forEach(function(entry) {
+          entry.menuitem.classList.remove("active");
+          entry.menuitem.classList.remove("passed");
+          if (top >= placeUponId(entry.id, 200)) {
+            if (activereached) entry.menuitem.classList.add("passed");
+            else entry.menuitem.classList.add("active");
+            activereached = true;
+          }
+        });
+      };
+    </script>
+
+    <header class="w-full md:w-5/6">
+      <div class="mt-10 md:mt-12">
+        <h1 class="head-alt-md md:head-alt-lg head-alt-highlighted">Kvalitně připravené stavby, opravy a vedení</h1>
+        <h2 class="head-alt-sm md:head-alt-md mb-20 mt-9">
+          <div class="leading-tight"><p data-block-key="rrxvy">Opakované uzavírky, výkopy bez dělníků, prodražené stavby. Levá ruka neví o pravé! Posuňme projekty dál sdílením dat mezi všemi účastníky.<a href="#zdroje"><sup>[11]</sup></a></p></div>
+        </h2>
+      </div>
+    </header>
+
+    <div class="problem-pack">
+      <section id="takhle-to-dal-nejde" class="program-detail-problem-solution mb-20">
+
+        <div class="problem-cross"><i class="ico--thincross text-xs sm:text-xl text-white"></i></div>
+        <div class="problem-inner content-block">
+
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Takhle to dál nejde</h2>
+          <p class="text-base mb-8 para">
+            <p data-block-key="lkbzi">V březnu 2020 mělo zpoždění <a href="https://www.mdcr.cz/Media/Media-a-tiskove-zpravy/Havlicek-Prijetim-linioveho-zakona-muzeme-urychli">108 stavebních akcí celostátního významu, z toho 30 staveb dálnic</a>. Do veřejných staveb přiteče, zčásti zbytečně, 18 miliard korun měsíčně<a href="#zdroje"><sup>[5]</sup></a>. Projekty nezohledňují potřeby všech zájmových skupin – neprovázanost informací stavby brzdí a prodražuje.<a href="#zdroje"><sup>[10]</sup></a></p>
+          </p>
+
+          <div id="v-cem-je-problem">
+            <div class="accordeon-row accordeon-row--fadeout h-full">
+              <div class="accordeon-row-head" v-on:click="toggleElement" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+                <h3 class="accordeon-row-heading head-alt-xs mb-0">V čem je problém</h3>
+                <i class="ico--chevron-down"></i>
+              </div>
+              <div class="accordeon-row-body accordeon-row-body--fadeout" style="height: 220px; max-height: 560px;">
+                <div>
+                  <p data-block-key="6j25b">Neziskové organizace sdružené v Dopravní federaci NNO identifikovaly desítku problematických oblastí, které je potřeba v oblasti výběru, přípravy a realizace dopravních staveb zlepšit.<a href="#zdroje"><sup>[11]</sup></a></p><p data-block-key="l0dv3">Dopravní strategie státu / Ministerstva dopravy – nedostatečné posuzování efektivity, potřebnosti a hospodárnosti dopravních staveb.</p><p data-block-key="m43ue">Projekt jako celek, varianty – projekt není posuzován jako celek, často nejsou posouzeny varianty nebo je vybrána problematická trasa.</p><p data-block-key="eyq80">Odbornost, projektové řízení – nekompetentnost, neodbornost, malá kapacita státního investora (tj. zadavatele), nedostatečný systém projektového řízení.</p><p data-block-key="i8a2k">Geotechnické průzkumy při přípravě stavby – neprováděny vůbec nebo nedostatečně.</p><p data-block-key="1nnr8">Výkupy pozemků – nespravedlivé výkupy, nespolupráce úřadů, směna, zbytkové pozemky.</p><p data-block-key="9ui9r">Stavební povolení – zahajování staveb bez stavebního povolení. </p><p data-block-key="5li75">Veřejné zakázky – nefungující trh dodavatelů, nekvalitní zadávací dokumentace, málo podrobná projektová dokumentace, kvalifikační předpoklady, hodnotící kritéria, cena. </p><p data-block-key="6lfls">Střety zájmů vykonavatelů různých rolí – především projektant, zhotovitel, technický dozor.</p><p data-block-key="svmez">Smlouvy – není dodržován <a href="https://www.fidic.info/fidic.html">FIDIC</a>, nedostatečná odpovědnost dodavatelů, krátké záruky, zádržné, reklamace, řešení sporů.</p><p data-block-key="6z7fm">Data – absence systému projektového řízení, nedostatečná digitalizace a ukládání dat.</p>
+                </div>
+              </div>
+              <button class="btn btn--icon absolute bottom-8 left-8" onclick="this.parentElement.classList.add('accordeon-row--open');">
+                <div class="btn__body-wrap">
+                  <div class="btn__body bg-acidgreen -bottom-20 text-black py-4">Zobrazit více</div>
+                  <div class="btn__icon bg-black">
+                    <i class="ico--chevron-right"></i>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="nase-vize" class="ideal-check"><i class="ico--check text-xs sm:text-xl text-black"></i></div>
+        <div class="ideal-inner bg-lemon content-block">
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Naše vize</h2>
+          <p class="text-base">
+            <p data-block-key="om6m8">Díky sdíleným datům budeme mít úplný přehled a veřejnou kontrolu nad stavem infrastruktury. S kvalitní přípravou budeme stavět bez zbytečných prostojů a  kolizí. Sítě budou v kolektorech, které umožňují snadnou údržbu i rozšíření. Zeleň ve městech nebude překážkou dalšího rozvoje.</p>
+          </p>
+        </div>
+
+      </section>
+    </div>
+
+    <div id="jak-to-chceme-udelat" class="container-collapsible-content" style="height: 50vh;">
+
+      <h3 class="head-alt-base mb-8">Jak to chceme udělat?</h3>
+      <div class="content-block">
+        <ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="mu8mg">Zpracujeme návrh liniového zákona podle vzoru vyspělých zemí s dlouhodobým investičním plánem (<a href="https://www.bmvi.de/SharedDocs/EN/Documents/G/ftip-2030.pdf?__blob=publicationFile">Německo</a><a href="#zdroje"><sup>[6]</sup></a>, <a href="https://www.taggmbh.at/en/for-system-users/infrastructure-development-and-network-development-plan-ndp/">Rakousko</a><a href="#zdroje"><sup>[7]</sup></a>, Nizozemsko<a href="#zdroje"><sup>[8]</sup></a>, Británie…). To nám umožní stavět rychle, levně, efektivně a návazně.</li><li class="mb-4" data-block-key="pycxa">Zrealizujeme <a href="https://www.mvcr.cz/clanek/geoinfostrategie.aspx">Národní sadu prostorových objektů</a> (s MV ČR), konsolidujeme dostupná data o sítích, dotáhneme pasportizaci veřejného majetku a podpoříme integraci GISů (geografických informačních systémů) obecní a krajské úrovně do větších celků.<a href="#zdroje"><sup>[1]</sup></a></li><li class="mb-4" data-block-key="wwo87">Vznikne centrální „one-stop shop“ – jediné místo, kde půjde pokládat dotaz na existence sítí nezávisle na území a provozovateli.</li><li class="mb-4" data-block-key="gxsqo">Legislativně posílíme města, aby mohla organizovat technickou infrastrukturu nad i pod zemí; budeme se v tomto inspirovat např. v Nizozemsku<a href="#zdroje"><sup>[8]</sup></a>, kde stát vytváří tzv. prostorové plány.</li><li class="mb-4" data-block-key="2kny7">Aktualizujeme legislativu ochranného pásma sítí pro výsadbu zeleně tak, aby se stromy staly funkčními prvky, ne jen trpěnou dekorací.</li><li class="mb-4" data-block-key="019fs">Podpoříme využívání kolektorů a sdružování sítí. Samospráva bude mít legislativní nástroj, jak si vynutit využívání existující infrastruktury<a href="#zdroje"><sup>[15]</sup></a> (např. kolektoru) a ochranu, event. náhradní výsadbu zeleně.<br/></li></ul>
+      </div>
+
+      <div id="kolik-na-to-chceme-casu" class="grid grid-cols-1 gap-8 my-20">
+        
+        
+          <div class="card shadow-none bg-grey-125">
+            <div class="card__body content-block">
+              <h3 class="card-headline mb-8">Kolik na to chceme času?</h3>
+              <p class="card-body-text para"><p data-block-key="66ivi">Dvě volební období – jedná se o úpravu parametrů stávající legislativy, první  volební období k implementaci příslušné legislativy, druhé k nalezení rovnováhy nového stavu.</p></p>
+            </div>
+          </div>
+        
+      </div>
+
+      
+        <h3 id="pro-koho-to-chceme-hlavne" class="head-alt-base mb-8 mt-20">Pro koho to chceme hlavně</h3>
+      
+
+      
+        <div class="program-detail-benefity my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8">
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/4.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro seniory</p>
+    <div class="text-sm"><p data-block-key="5qhab">Funkční infrastruktura sníží omezení v osobním i pracovním životě (např. méně rozkopaných chodníků).</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/6.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro živnostníky a podnikatele</p>
+    <div class="text-sm"><p data-block-key="hq3j7">Snížíme čas strávený v kolonách. Provozovatelům zvýšíme pohodlí při správě sítí.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/8.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro nás pro všechny</p>
+    <div class="text-sm"><p data-block-key="63x7s">Funkční infrastruktura sníží omezení v osobním i pracovním životě, strávíme méně hodin v kolonách.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/9.754b84f78864.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro veřejné finance</p>
+    <div class="text-sm"><p data-block-key="ysk6s">Kvalitní příprava ušetří čas a peníze při realizaci výstavby. Investice do kolektorů sníží náklady na údržbu a rozšiřování.</p></div>
+  </div>
+</div>
+
+          
+        </div>
+      
+
+      
+
+      
+
+      <h3 id="co-pro-to-uz-delame" class="head-alt-base mt-20 mb-10">Co pro to už děláme</h3>
+      <div class="content-block">
+        <ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="j2krp">Průběžně <a href="https://www.youtube.com/watch?v=QTUwUX_BJYI">připomínkujeme</a> liniový zákon 416/2009 Sb. v souladu se zmíněnou strategií.<a href="#zdroje"><sup>[9]</sup></a></li><li class="mb-4" data-block-key="aoki4">Iniciovali jsme dialog o 160+  starosty obcí v okolí RS1 VRT.<a href="#zdroje"><sup>[4]</sup></a></li><li class="mb-4" data-block-key="e5aho">Na řadě míst (např. <a href="http://www.hybrid.cz/praha-se-pripravuje-na-nastup-elektromobilu-nabijet-pujde-ze-4000-lamp-verejneho-osvetleni">Praha</a>, Brno, Ostrava, Uherské Hradiště, Mariánské Lázně) systematizujeme sběr otevřených dat a jejich využití pro efektivnější plánování akcí, a to nejen v oblasti technické infrastruktury.<a href="#zdroje"><sup>[13]</sup></a></li><li class="mb-4" data-block-key="m9u2q">V Brně jsme prosadili <a href="https://www.arcdata.cz/media/download/1538">standard na budování technické infrastruktury</a>.</li></ul>
+      </div>
+
+      <h3 id="na-co-se-nas-casto-ptate" class="head-alt-base mb-8 mt-20">Na co se nás často ptáte</h3>
+      <div class="space-y-1">
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Kolik to bude stát?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="fyi6q">Obecné rčení říká, že gram inkoustu při plánování nahrazuje kilogram zlata při následném odstraňování chyb, nicméně konsolidace dostupných dat by mohla  přijít na 100 milionů korun počáteční investice a 25 milionů korun ročně na provoz (ČÚZK zřídí nové oddělení, které bude spravovat GISový základ pro všechny povinné subjekty. V zákoně se vymezí charakter objektů a atributů, které bude databáze obsahovat. Oddělení o cca 10 lidech zvládne sbírat aktualizace a řídit přístupy).</p><p data-block-key="vmqs"></p><p data-block-key="7g7j6">Konkrétní čísla lze například ilustrovat na nákladech pravidelného servisu, kdy řádná údržba vykazuje i více než <a href="https://www.micromain.com/preventive-maintenance-study/">pětinásobnou návratnost</a> během životnosti infrastruktury udržované s péčí řádného hospodáře. Tedy např. tím, že vodovodní potrubí a další sítě učiníme dostupnější pomocí „drahých“ kolektorů pod silnicemi, ušetříme v dlouhodobém pohledu za rozkopávání vrstev při jejich opravách a výměnách.<br/><br/> Laciné, rychlé a nedomyšlené vrstvení infrastruktury může být pro společnost nejen drahé, ale ve výsledku zároveň i neřešitelnou překážkou rozvoje – viz situace s <a href="https://www.vox.com/a/lead-exposure-risk-map">olověným potrubím v USA</a>, nebo <a href="https://borgenproject.org/sanitation-in-india/">chybějící kanalizace a vodovody</a> v živelně vzniklých indických slumech, kdy náklady na dodatečné zlepšení <a href="https://eu.freep.com/story/news/local/michigan/flint-water-crisis/2016/03/08/rating-agency-corrects-lead-pipe-replacement-estimate/81499712/">dosahují astronomických částek</a>.</p></p>
+    </div>
+  </div>
+</div>
+
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Nezpozdí to již tak dlouhou přípravu staveb?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="w3nvy">Vezměme si příklad nyní živě diskutovaných vysokorychlostních tratí (VRT) – „VRTky“ jsou oproti doprovodným stavbám nejnáročnější na dobu přípravy i dobu výstavby.<br/> Takže přidružené stavby se pod VRT „schovají“, jejich doba přípravy je kratší než u hlavního projektu. Investoři doprovodných staveb ze samospráv (kraje, obce) budou mít nárok na příspěvek státu, jen pokud dodají svoje požadavky ve stanovené lhůtě.<br/><br/> Státní organizace nebudou moci realizovat své investice v daném území v určité době od dokončení stavby VRT, aby nebylo území opětovně zatěžováno další stavbou. Je to analogie, aby se ulice ve městě nerozkopávala každý rok…</p></p>
+    </div>
+  </div>
+</div>
+
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Nebudou si města a obce vymýšlet zbytečné požadavky třeba na nové aquaparky nebo sportovní stadiony?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="43uzt">Stejně jako v případě čerpání dotací oprávněnými subjekty je klíčové správné nastavení parametrů, férová a srozumitelná pravidla tak, aby měla k podmínkám realizace přístup široká veřejnost.</p></p>
+    </div>
+  </div>
+</div>
+
+        
+      </div>
+
+      
+        <h3 id="souvisejici-body" class="head-alt-base mb-8 mt-20">Související body:</h3>
+
+        <div class="carousel-card-list __js-root">
+          <ui-app inline-template>
+            <ui-carousel>
+              <!--<carousel :perPage="4" :perPageCustom="[ [200, 1], [768, 3], [1024, 4]]" :navigationEnabled="true" :navigationNextLabel="nextlabel" :navigationPrevLabel="prevlabel" class="article-card-list pt-12 pb-8">-->
+              <carousel :per-page=1 :navigation-enabled="true" class="article-card-list pb-8">
+
+                <slide>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8">
+
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="/priority/vystavba/">Vzájemně propojená dopravní výstavba</a></h1>
+                          <div class="card-body-text"><a href="/priority/vystavba/"><p data-block-key="czofo">Přestaňme lít beton, jak koho napadne. Infrastrukturu dopravy plánujme v logickém celku roky dopředu. Promyšleně, efektivně, bez průšvihů.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/mirnejsi-vedra-ve-mestech/">Mírnější vedra ve městech</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/priority/mirnejsi-vedra-ve-mestech/"><p data-block-key="79qmb">Letní dny ve městech jsou peklo. Pojďme horku čelit chytrým snižováním teploty: vodními toky, zelení, zužitkováním dešťů.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/transparentni-a-efektivni-verejne-zakazky/">Transparentní a efektivní veřejné zakázky</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/transparentni-a-efektivni-verejne-zakazky/"><p data-block-key="fsdr7">Naučme úředníky nakupovat, jako by to platili z vlastního. Ať pořizují jenom to, co za to státu stojí, bez průtahů a pod dohledem nás všech!</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="/priority/vysokorychlostni/">Kombinovaná výstavba vysokorychlostních tratí</a></h1>
+                          <div class="card-body-text"><a href="/priority/vysokorychlostni/"><p data-block-key="dtvxc">Neplýtvejme časem, tenhle vlak nám nesmí ujet! S rychlými spojeními nám budou blízcí blíž. Na jejich výstavbě vydělají obce, regiony i stát.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+
+                  </div>
+                </slide>
+
+              </carousel>
+            </ui-carousel>
+          </ui-app>
+        </div>
+      
+
+      <h3 id="zdroje" class="head-alt-base mb-8 mt-20">Klidně si to ověřte</h3>
+      <div class="content-block">
+        
+                    <div id="zdroj1" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[1]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo vnitra. Strategie rozvoje infrastruktury pro prostorové informace. 2014. Dostupné <a class="text-fxactivecolor underline" href="https://www.mvcr.cz/clanek/geoinfostrategie.aspx">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj2" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[2]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo financí SR. Najlepší z možných svetov: Hodnota za peniaze v slovenskej verejnej politike. 2016. Dostupné <a class="text-fxactivecolor underline" href="/documents/34/Doprava_Kombinovana_Najlepsi_z_moznych_svetov_marec_2016.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj3" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[3]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, Ondřej, WITOSZ, David, LIČKA, Jan. Vlastní koncepční dokument +150. 2019. Dostupné <a class="text-fxactivecolor underline" href="/documents/36/Doprava_Kombinovana_vystavba_zdroj3.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj4" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[4]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, Ondřej. Dopis starostům v trase RS2 (vlastní iniciativa). 2020 Dostupné <a class="text-fxactivecolor underline" href="/documents/33/Doprava_Kombinovana_dopis_starost%C5%AFm.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj5" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[5]</div>
+                      <div class="inline-block align-top max-w-2xl">DUFEK, Zdeněk, KORYTÁROVÁ, Jana. Veřejné stavební investice. ISBN 978-80-7502-322-3. Leges 2019. Dostupné <a class="text-fxactivecolor underline" href="https://www.knihajilemnice.cz/verejne-stavebni-investice-zdenek-dufek-jana-korytarova-tomas-apeltauer-vit-hromadka-petr-fiala-ros.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj6" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[6]</div>
+                      <div class="inline-block align-top max-w-2xl">Federal Ministry of Transport and Digital Infrastructure. The 2030 Federal Transport Infrastructure Plan, Německo. Dostupné <a class="text-fxactivecolor underline" href="https://www.bmvi.de/SharedDocs/EN/Documents/G/ftip-2030.pdf?__blob=publicationFile">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj7" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[7]</div>
+                      <div class="inline-block align-top max-w-2xl">Austrian coordinated Network development plan (CNDP), Rakousko. Dostupné <a class="text-fxactivecolor underline" href="https://www.taggmbh.at/en/for-system-users/infrastructure-development-and-network-development-plan-ndp/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj8" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[8]</div>
+                      <div class="inline-block align-top max-w-2xl">Government of the Netherlands. The National Policy Strategy for Infrastructure and Spatial Planning, Ministry of Infrastructure and the Environment. Holandsko. Dostupné <a class="text-fxactivecolor underline" href="https://www.government.nl/topics/spatial-planning-and-infrastructure/documents/publications/2013/07/24/summary-national-policy-strategy-for-infrastructure-and-spatial-planning">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj9" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[9]</div>
+                      <div class="inline-block align-top max-w-2xl">Piráti. Nezvedneme ruku pro neuvážený zásah do práv majitelů pozemků, říká Pirát Polanský. 2018. Dostupné <a class="text-fxactivecolor underline" href="https://www.pirati.cz/tiskove-zpravy/polansky-a-pirati-proti-neuvazenemu-zasahu-do-prav-majitelu-pozemku.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj10" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[10]</div>
+                      <div class="inline-block align-top max-w-2xl">KŘÍŽ, Karel. Stromy a inženýrské sítě ve městech: „Stavby a především opravy sítí dělají odděleně, nekoordinovaně, protože patří různým vlastníkům a spravují je různí provozovatelé.” 2020. Dostupné <a class="text-fxactivecolor underline" href="https://ekolist.cz/cz/publicistika/rozhovory/stromu-by-v-ulicich-mohlo-byt-vic-pokud-by-je-bylo-mozne-jednoduseji-kacet-rika-projektant-karel-kriz">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj11" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[11]</div>
+                      <div class="inline-block align-top max-w-2xl">Dopravní federace NNO. Desatero pro dopravní stavby. Dostupné <a class="text-fxactivecolor underline" href="http://www.pruhlednadoprava.cz/desatero-pro-dopravni-stavby/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj12" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[12]</div>
+                      <div class="inline-block align-top max-w-2xl">Deloitte. Udržitelné stavební investice v České republice. 2012. Dostupné <a class="text-fxactivecolor underline" href="https://www2.deloitte.com/content/dam/Deloitte/cz/Documents/survey/udrzitelne_stavebni_investice.pdf">zde</a>.<br/><i>„Nejistota sektorových investorů při přípravě akcí vyplývající z nejistoty finančních prostředků pro jednotlivé akce v rámci každoročního plánování i v rámci běžného roku, jejíž důsledkem je vysoký počet rozpracovaných investičních akcí, akcí ve stavu přípravy a z toho plynoucí neefektivita vložených prostředků.“</i></div>
+                    </div>
+                    
+                    <div id="zdroj13" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[13]</div>
+                      <div class="inline-block align-top max-w-2xl">Příklady:<br/>– ELFMARK, František. Občanům města je zpřístupněn nový geografický informační systém (GIS). Dostupné <a class="text-fxactivecolor underline" href="https://www.frantisekelfmark.cz/obcanum-mesta-zpristupnen-novy-geograficky-informacni-system-gis/">zde</a>.<br/>– PROFANT, Ondřej. Otevřená města a jejich přínos. Dostupné <a class="text-fxactivecolor underline" href="https://www.profant.eu/2020/prinos-om.html">zde</a>.<br/>– Průhledná doprava. Výkupy pozemků. Dostupné <a class="text-fxactivecolor underline" href="http://www.pruhlednadoprava.cz/vyzva-vykupy-pozemku">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj14" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[14]</div>
+                      <div class="inline-block align-top max-w-2xl">MINEHANE, Scott W. Digital Infrastructure Policy and Regulation in the Asia-Pacific Region. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://www.itu.int/en/ITU-D/Regional-Presence/AsiaPacific/SiteAssets/Pages/Events/2019/RRITP2019/ASP/ITU_2019_Digital_Infrastructure_28Aug2019FNL.pdf">zde</a>:<br/>– Encourage greater infrastructure sharing for broadband and 5G deployment based on exemplar models,<br/>– The establishment of a national infrastructure database to permit ‘check before you dig’ services,<br/>– If possible, adopt a one stop centre approval process for site and other approvals.<br/>Pravidlo „Check before you dig“ pochopitelně lze vztáhnout obecně na sítě vedené pod zemí (plyn, voda, elektro).</div>
+                    </div>
+                    
+        <div id="zdroj15" class="source leading-loose text-sm">
+          <div class="inline-block align-top w-9 text-fxactivecolor">[15]</div>
+          <div class="inline-block align-top max-w-2xl">Příkladem budiž země, kde si nemohou dovolit plýtvat prostorem a půdou jako my – například Nizozemsko a SVIR (Spatial Vision on Infrastructure & Spatial Planning). Nizozemsko je stát o poloviční rozloze než ČR, se 17 miliony obyvatel, které je uváděno jako 6. nejlepší z hlediska kvality života. Už jen termín „prostorový plán“ (ne jako u nás územní plán) značí, že uvažují v širších souvislostech. Za zmínku stojí, že spolupracují nejen napříč „government, provinces and municipalities“, ale i přes hranice s Německem. Dostupné <a class="text-fxactivecolor underline" href="https://www.government.nl/topics/spatial-planning-and-infrastructure/spatial-planning-in-the-netherlands">zde</a>.</div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="container-collapsible-button-container w-full">
+      <button class="container-collapsible-button btn btn--icon text-lg block mx-auto" onclick="this.parentElement.parentElement.classList.add('container-collapsible-open');">
+        <div class="btn__body-wrap">
+          <div class="btn__body py-8 leading-4">Zobrazit více</div>
+          <div class="btn__icon px-8 bg-grey-800 border-grey-500">
+            <i class="ico--chevron-right"></i>
+          </div>
+        </div>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  /*should run once on any page accordeon rows with fadeouts are present*/
+  document.addEventListener("DOMContentLoaded", setMaxHeightsFadeouts);
+  window.addEventListener('resize', setMaxHeightsFadeouts);
+
+  function setMaxHeightsFadeouts() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--fadeout');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = (parseInt(accordeonRowBodies[i].scrollHeight) + 32) + "px";
+      }; /*plus padding*/
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setMaxHeights);
+  window.addEventListener('resize', setMaxHeights);
+
+  function setMaxHeights() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--classic');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = accordeonRowBodies[i].scrollHeight + "px";
+      };
+    }
+  }
+</script>
+ 

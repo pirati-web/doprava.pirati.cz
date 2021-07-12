@@ -1,0 +1,515 @@
+---
+layout: default
+title:  Priority v dopravě - Vzájemně propojená dopravní výstavba  
+description: Priority v dopravě - Vzájemně propojená dopravní výstavba
+keywords: Priority v dopravě - Vzájemně propojená dopravní výstavba
+---
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-180.png" sizes="180x180">
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-120.png" sizes="120x120">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styleguide.min.css">
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styles.css">
+  <style type="text/css">
+    sup {
+      white-space: nowrap;
+    }
+    .head-alt-highlighted {
+      line-height: 1.2 !important;
+    }
+  </style>
+
+
+ 
+
+<div class="o-section">
+
+  <div class="row">
+
+ 
+<div class="container container-default pt-4 pb-20">
+  <div class="w-full lg:w-4/6 relative container-collapsible">
+
+    <div class="floating-nav-wrapper hidden xl:block" id="floatingNavBarWrapper">
+      <div class="floating-nav-panel " id="floatingNavBar">
+        <div class="opener py-6 pb-16 px-11 bg-acidgreen text-white font-alt">
+          RYCHLÁ NAVIGACE
+        </div>
+        <div class="inner float-panel-inner elevation-2">
+          <ul>
+            <li><a href="#takhle-to-dal-nejde">Takhle to dál nejde</a></li>
+            <li><a href="#v-cem-je-problem">V čem je problém</a></li>
+            <li><a href="#nase-vize">Naše vize</a></li>
+            <li><a href="#jak-to-chceme-udelat" class="active">Jak to chceme udělat?</a></li>
+            <li><a href="#kolik-na-to-chceme-casu">Kolik na to chceme času?</a></li>
+            
+              <li><a href="#pro-koho-to-chceme-hlavne">Pro koho to chceme hlavně</a></li>
+            
+            <li><a href="#co-pro-to-uz-delame">Co pro to už děláme</a></li>
+            <li><a href="#na-co-se-nas-casto-ptate">Na co se nás často ptáte</a></li>
+            
+              <li><a href="#souvisejici-body">Související body</a></li>
+            
+            <li><a href="#zdroje">Klidně si to ověřte</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", onLoadFunction);
+      var anchorsArray = [];
+
+      function placeUponId(id, space) {
+        return document.getElementById(id).getBoundingClientRect().top + window.scrollY - space;
+      }
+
+      function onLoadFunction(e) {
+        var anchorElemsArray;
+        onResizeFunction();
+        for (const entry of anchorsArray) {
+          entry.menuitem.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+          e.preventDefault();
+          var id = this.getAttribute("href").replace("#", "");
+          console.log(placeUponId(id, 20));
+          scroll({
+            top: placeUponId(id, 20),
+            behavior: "smooth"
+          });
+        }
+
+
+        window.addEventListener("resize", onResizeFunction);
+      }
+
+      function onResizeFunction(e) {
+        var itemsProcessed = 0;
+        var anchorElemsArray = document.getElementsByClassName("float-panel-inner")[0].querySelectorAll("li a");
+        anchorsArray = [];
+        anchorElemsArray.forEach(function(entry) {
+          var id = entry.getAttribute("href").replace("#", "");
+          anchorsArray.push({
+            id: id,
+            top: placeUponId(id, 200),
+            menuitem: entry
+          });
+          itemsProcessed++;
+          if (itemsProcessed === anchorElemsArray.length) {
+            anchorsArray.reverse();
+          }
+        });
+        console.log(anchorsArray);
+      }
+      window.onscroll = function() {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        var activereached = false;
+        anchorsArray.forEach(function(entry) {
+          entry.menuitem.classList.remove("active");
+          entry.menuitem.classList.remove("passed");
+          if (top >= placeUponId(entry.id, 200)) {
+            if (activereached) entry.menuitem.classList.add("passed");
+            else entry.menuitem.classList.add("active");
+            activereached = true;
+          }
+        });
+      };
+    </script>
+
+    <header class="w-full md:w-5/6">
+      <div class="mt-10 md:mt-12">
+        <h1 class="head-alt-md md:head-alt-lg head-alt-highlighted">Vzájemně propojená dopravní výstavba</h1>
+        <h2 class="head-alt-sm md:head-alt-md mb-20 mt-9">
+          <div class="leading-tight"><p data-block-key="czofo">Přestaňme lít beton, jak koho napadne. Infrastrukturu dopravy plánujme v logickém celku roky dopředu. Promyšleně, efektivně, bez průšvihů.</p></div>
+        </h2>
+      </div>
+    </header>
+
+    <div class="problem-pack">
+      <section id="takhle-to-dal-nejde" class="program-detail-problem-solution mb-20">
+
+        <div class="problem-cross"><i class="ico--thincross text-xs sm:text-xl text-white"></i></div>
+        <div class="problem-inner content-block">
+
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Takhle to dál nejde</h2>
+          <p class="text-base mb-8 para">
+            <p data-block-key="w1ygt">Rozpočet na stavby se licituje z roku na rok, absence dlouhodobé strategie vede k chybám v přípravě staveb. Staví se krátké, nespojité úseky, které podle analýzy nákladů a přínosů nepatří mezi priority.  Kvalita infrastruktury jako funkčního celku je nízká.<a href="#zdroje"><sup>[1, 2]</sup></a></p>
+          </p>
+
+          <div id="v-cem-je-problem">
+            <div class="accordeon-row accordeon-row--fadeout h-full">
+              <div class="accordeon-row-head" v-on:click="toggleElement" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+                <h3 class="accordeon-row-heading head-alt-xs mb-0">V čem je problém</h3>
+                <i class="ico--chevron-down"></i>
+              </div>
+              <div class="accordeon-row-body accordeon-row-body--fadeout" style="height: 220px; max-height: 560px;">
+                <div>
+                  <p data-block-key="z75rd">150 úředníků Státního fondu dopravní infrastruktury funguje jako prostý přerozdělovač na peníze<a href="#zdroje"><sup>[3]</sup></a>, neplní svou roli záruky předvídatelného a stabilního plánování.<br/><br/> Za 20 let vzrostl objem českého exportu k celkovému HDP z 27 na 67 procent<a href="#zdroje"><sup>[4]</sup></a> – svoji polohu uprostřed Evropy chceme zhodnocovat, ne kvůli ní jako pasivní pozorovatel tranzitních koridorů trpět.<a href="#zdroje"><sup>[5]</sup></a><br/><br/>Problém v dopravě u nás není generování formálně správných teoretických koncepcí a strategií<a href="#zdroje"><sup>[6]</sup></a> na úrovni Ministerstva dopravy. Problém je ve vlastní realizaci nepružnými, personálně podvybavenými a prolobbovanými organizacemi s nahodile sestaveným rozpočtem při každoročním „porcování medvěda“.<a href="#zdroje"><sup>[7]</sup></a></p><p data-block-key="ndn9t">Problém je také v chybném stanovení priorit napříč jednotlivými druhy dopravy a pro jednotlivé stavby též v nekvalitní přípravě – nedostatečném posouzení variant, „salámová metoda“, rozpor územně plánovacích dokumentací s koncepcemi, strategiemi a závazky (např. Green Deal, Strategický rámec atd.) a špatnou komunikací s (dotčenou) veřejností. </p><p data-block-key="s46u6">Shrnutí kritických bodů je v odkazu.<a href="#zdroje"><sup>[8]</sup></a></p><p data-block-key="ny73t">Co tedy žádáme? Stanovení investičních priorit s ohledem na využitelnost staveb, jejich přínosy a soulad se strategickými dokumenty a závazky ČR.<br/><br/>Dlouhodobý plán by měl vycházet z investičních priorit stanovených na základě potřebnosti, přínosů a souladu záměrů se strategickými dokumenty a závazky.<br/><br/> Pro udržitelnou městskou mobilitu je důležité zejména:<a href="#zdroje"><sup>[9]</sup></a><br/><br/>1. předcházení potřebám po mobilitě,</p><p data-block-key="v1aee">2. podpora využívání alternativních způsobů dopravy,</p><p data-block-key="huoud">3. snižování negativních vlivů jednotlivých druhů dopravy ve městě na veřejné zdraví, jakož i globální změny,</p><p data-block-key="vpzdf">4. humanizace uličního prostoru tak, aby se ulice staly multifunkčním prostorem a nikoliv jen jednoúčelovou kapacitní dopravní a parkovací infrastrukturou.</p>
+                </div>
+              </div>
+              <button class="btn btn--icon absolute bottom-8 left-8" onclick="this.parentElement.classList.add('accordeon-row--open');">
+                <div class="btn__body-wrap">
+                  <div class="btn__body bg-acidgreen -bottom-20 text-black py-4">Zobrazit více</div>
+                  <div class="btn__icon bg-black">
+                    <i class="ico--chevron-right"></i>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="nase-vize" class="ideal-check"><i class="ico--check text-xs sm:text-xl text-black"></i></div>
+        <div class="ideal-inner bg-lemon content-block">
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Naše vize</h2>
+          <p class="text-base">
+            <p data-block-key="tep9s">Infrastrukturu budeme stavět podle dlouhodobého plánu s širokou politickou podporou, zákonem zajištěným  a předvídatelným financováním. Výstavba bude probíhat podle plnohodnotného liniového zákona. Každý, od občana přes dodavatele až po dopravce, bude vědět, kdy a co se postaví.</p>
+          </p>
+        </div>
+
+      </section>
+    </div>
+
+    <div id="jak-to-chceme-udelat" class="container-collapsible-content" style="height: 50vh;">
+
+      <h3 class="head-alt-base mb-8">Jak to chceme udělat?</h3>
+      <div class="content-block">
+        <ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="ng6ov">Připravíme plán na vybudování páteřní sítě vysokorychlostních železnic a dálnic včetně předpokládaného harmonogramu, priorit a finančního krytí.</li><li class="mb-4" data-block-key="vie2e">Plánování dopravy odvodíme od cíle a tomu přizpůsobíme prostředky: budou stanoveny cílové doby, za které bude možné se dostat z jakéhokoliv místa republiky do krajského a hlavního města. </li><li class="mb-4" data-block-key="288j1">Budeme rozvíjet nové kapacity pro nákladní železniční dopravu, aby bylo možné na ni převést významnou část dopravy kamionové.</li><li class="mb-4" data-block-key="nh2hi">Odstraníme „železnou oponu“ na hraničních přechodech, především s Německem a Rakouskem, aby zejména v nákladní železniční přepravě nedocházelo ke zbytečným procesním zdržením.  </li><li class="mb-4" data-block-key="126tg">Navrhneme priority staveb podle společenské potřebnosti. Například obchvaty obcí na silnicích I. třídy se musí stavět podle věcných kritérií (především  intenzity dopravy), a ne politického lobbingu. Z více konkurenčních projektů se bude prioritizovat ten, který v analýze nákladů a přínosů (CBA) vychází jako výhodnější, např. více usnadní cestování a má menší negativní dopad na lidi a přírodu.</li><li class="mb-4" data-block-key="jfbuo">Pro tento plán budeme ve Sněmovně hledat politickou shodu s širokou podporou.</li><li class="mb-4" data-block-key="efle5">Na schválení plánu naváže zákon o zajištění jeho financování na dobu minimálně 10 let, aby potřebné výdaje byly dlouhodobě kryté.</li></ul>
+      </div>
+
+      <div id="kolik-na-to-chceme-casu" class="grid grid-cols-1 gap-8 my-20">
+        
+        
+          <div class="card shadow-none bg-grey-125">
+            <div class="card__body content-block">
+              <h3 class="card-headline mb-8">Kolik na to chceme času?</h3>
+              <p class="card-body-text para"><p data-block-key="3pu83">2 roky na přípravu plánu a nového procesního modelu</p><p data-block-key="2qr5c">2 roky na pilotní provoz a vyhodnocení</p></p>
+            </div>
+          </div>
+        
+      </div>
+
+      
+        <h3 id="pro-koho-to-chceme-hlavne" class="head-alt-base mb-8 mt-20">Pro koho to chceme hlavně</h3>
+      
+
+      
+        <div class="program-detail-benefity my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8">
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/8.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro nás pro všechny</p>
+    <div class="text-sm"><p data-block-key="pxjzu">Veřejnou dopravu učiníme dostupnější, kvalitnější a rychlejší.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/5.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro zaměstnance</p>
+    <div class="text-sm"><p data-block-key="lswrj">Lepší dopravní dostupnost veřejnou dopravou zvýší mobilitu zaměstnanců a konkurenceschopnost.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/6.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro živnostníky a podnikatele</p>
+    <div class="text-sm"><p data-block-key="npitf">Zaměstnavatelé budou mít snazší přístup ke kvalifikovaným lidem. Živnostníci zase najdou více zakázek v rostoucím segmentu služeb.<br/></p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/7.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro lidi ve finanční tísni</p>
+    <div class="text-sm"><p data-block-key="b6zg1">Přibudou pracovní příležitosti. Doprava bude ekonomicky dostupná..</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/9.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro veřejné finance</p>
+    <div class="text-sm"><p data-block-key="edkhe">Předvídatelnost výstavby povede k zprůhlednění rozhodovacích procesů, zapojení více subjektů a nižším nákladům z veřejných rozpočtů.</p></div>
+  </div>
+</div>
+
+          
+        </div>
+      
+
+      
+        <div class="program-detail-benefity my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8">
+          
+            
+<div class="card shadow-none bg-acidgreen text-black">
+  <div class="card__body">
+    <h3 class="card-headline mb-8">Pro ekologické spolky a organizace</h3>
+    <div class="card-body-text"><p data-block-key="wdel9">Doprava nezávislá na fosilních palivech a s minimální energetickou náročnoční přispěje ke zdravějšímu životnímu prostředí.</p></div>
+  </div>
+</div>
+
+          
+        </div>
+      
+
+      
+
+      <h3 id="co-pro-to-uz-delame" class="head-alt-base mt-20 mb-10">Co pro to už děláme</h3>
+      <div class="content-block">
+        <ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="9dhdo">Navrhli jsme zefektivnění a ztransparentnění Státního fondu dopravní infrastruktury (SFDI).<a href="#zdroje"><sup>[10]</sup></a></li><li class="mb-4" data-block-key="3mcf8">V tomto volebním období konzistentně vyvíjíme tlak na výstavbu rychlostních železnic (volební programové dokumenty od roku 2017).<a href="#zdroje"><sup>[11]</sup></a></li><li class="mb-4" data-block-key="3bw6w">Oslovujeme klíčové hráče s cílem vysvětlit náš záměr již před volbami, a vytvořit tak příznivé prostředí pro jeho urychlenou realizaci.</li><li class="mb-4" data-block-key="onw43">Podíleli jsme se na první novele liniového zákona (2018). Zde jsme navrhli dodatečnou ochranu vlastníků, zatímco původní návrhy se jejich ochranou prakticky nezabývaly. Některé z těchto návrhů se staly součástí zákona, zbylé čekají na další vývoj samotného zákona.<a href="#zdroje"><sup>[12]</sup></a></li><li class="mb-4" data-block-key="5df9t">Během celého volebního období jsme vzdorovali snaze oligarchů privatizovat si veřejnou infrastrukturu na všech úrovních, viz např. články níže.<a href="#zdroje"><sup>[13]</sup></a></li></ul><h4 class="pl-11 font-bold text-xl mb-4" data-block-key="edckq"><br/>Články týmu Dopravy</h4><ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="c2s5v">Investice nebo chaotické betonování, říjen 2020<a href="#zdroje"><sup>[14]</sup></a></li><li class="mb-4" data-block-key="nab0o">Piráti proti D-O-L, říjen 2020<a href="#zdroje"><sup>[15]</sup></a></li><li class="mb-4" data-block-key="2me13">Plánování podle volebních období, září 2020<a href="#zdroje"><sup>[16]</sup></a></li><li class="mb-4" data-block-key="pp73m">Nastartujte bagry, září 2020<a href="#zdroje"><sup>[17]</sup></a></li><li class="mb-4" data-block-key="5rqtg">Poučení z krizového vývoje, srpen 2020<a href="#zdroje"><sup>[18]</sup></a></li><li class="mb-4" data-block-key="p754y">Problémy integrace dopravy, květen 2020<a href="#zdroje"><sup>[19]</sup></a></li><li class="mb-4" data-block-key="jjpqi">Problematika železničních přejezdů, březen 2020<a href="#zdroje"><sup>[20]</sup></a></li><li class="mb-4" data-block-key="xqevf">Koordinace výstavby infrastruktury, červenec 2019<a href="#zdroje"><sup>[21]</sup></a></li><li class="mb-4" data-block-key="xbl43">Pasporty jako nástroj chytré správy dopravních cest, červenec 2019<a href="#zdroje"><sup>[22]</sup></a></li><li class="mb-4" data-block-key="jzd05">Železnice propojená s Evropou, květen 2019<a href="#zdroje"><sup>[23]</sup></a></li></ul>
+      </div>
+
+      <h3 id="na-co-se-nas-casto-ptate" class="head-alt-base mb-8 mt-20">Na co se nás často ptáte</h3>
+      <div class="space-y-1">
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Podle jakého klíče zařazovat stavby do tohoto dlouhodobého rámce?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="vto1x">Je zapotřebí stanovit priority napříč jednotlivými druhy dopravy i pro jednotlivé stavby v souladu s cíli Dopravní politiky a dalšími strategickými dokumenty a závazky. Pro stavby je důležité doložit skutečnou potřebnost, nákladovou efektivitu (CBA) a také prověřit alternativy (více variant trasování a technického řešení, využití stávajících komunikacích či posílení jiných druhů dopravy, např. železnice, které řeší stejné dopravní relace).</p></p>
+    </div>
+  </div>
+</div>
+
+        
+      </div>
+
+      
+        <h3 id="souvisejici-body" class="head-alt-base mb-8 mt-20">Související body:</h3>
+
+        <div class="carousel-card-list __js-root">
+          <ui-app inline-template>
+            <ui-carousel>
+              <!--<carousel :perPage="4" :perPageCustom="[ [200, 1], [768, 3], [1024, 4]]" :navigationEnabled="true" :navigationNextLabel="nextlabel" :navigationPrevLabel="prevlabel" class="article-card-list pt-12 pb-8">-->
+              <carousel :per-page=1 :navigation-enabled="true" class="article-card-list pb-8">
+
+                <slide>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8">
+
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="/priority/vystavba/">Kombinovaná výstavba vysokorychlostních tratí</a></h1>
+                          <div class="card-body-text"><a href="/priority/vystavba/"><p data-block-key="dtvxc">Neplýtvejme časem, tenhle vlak nám nesmí ujet! S rychlými spojeními nám budou blízcí blíž. Na jejich výstavbě vydělají obce, regiony i stát.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="/priority/verejnadoprava/">Veřejná doprava lidských rozměrů</a></h1>
+                          <div class="card-body-text"><a href="/priority/verejnadoprava/"><p data-block-key="t7a9y">Společný cíl? Cestovat pohodlně a bezpečně, neplýtvat energií ani časem! Nezakazujme auta – budujme prostředí, kde nejsou nepostradatelná.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="/program/kvalitne-pripravene-stavby-opravy-a-vedeni/">Kvalitně připravené stavby, opravy a vedení</a></h1>
+                          <div class="card-body-text"><a href="/program/kvalitne-pripravene-stavby-opravy-a-vedeni/"><p data-block-key="rrxvy">Opakované uzavírky, výkopy bez dělníků, prodražené stavby. Levá ruka neví o pravé! Posuňme projekty dál sdílením dat mezi všemi účastníky.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+
+                  </div>
+                </slide>
+
+              </carousel>
+            </ui-carousel>
+          </ui-app>
+        </div>
+      
+
+      <h3 id="zdroje" class="head-alt-base mb-8 mt-20">Klidně si to ověřte</h3>
+      <div class="content-block">
+        
+                    <div id="zdroj1" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[1]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo pro místní rozvoj ČR. Dopravní dostupnost – Územní dimenze řešící dopravní dostupnost. Dostupné <a class="text-fxactivecolor underline" href="https://www.mmr.cz/cs/microsites/uzemni-dimenze/ud-typy/stara-ud/dopravni-dostupnost">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj2" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[2]</div>
+                      <div class="inline-block align-top max-w-2xl">HORKÁ, H., HRADIL, V., JELÍNKOVÁ, E., RŮŽIČKA, L. Může kvalita silnic ovlivnit ekonomický růst? Raiffeisen Bank. Dostupné <a class="text-fxactivecolor underline" href="/documents/31/Doprava_Vzajemne_propojena_zdroj2_Dopravni_infrastruktura_shrtcut.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj3" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[3]</div>
+                      <div class="inline-block align-top max-w-2xl">Usnesení vlády České republiky ze dne 23. listopadu 2016 č. 1034 ke Statutu Státního fondu dopravní infrastruktury. Dostupné <a class="text-fxactivecolor underline" href="https://www.sfdi.cz/zakladni-informace/statut-fondu/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj4" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[4]</div>
+                      <div class="inline-block align-top max-w-2xl">ČTK, Hospodářské noviny. Závislost Česka na zahraničním obchodu roste. Hodnota exportu vzhledem k HDP se zvýšila z 27 na 67 procent, ukazuje analýza [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://byznys.ihned.cz/c1-66290800-zavislost-ceska-na-zahranicnim-obchodu-roste-podil-exportu-na-hdp-se-za-posledni-dve-desetileti-zvysil-ze-27-na-67-procent-ukazuje-analyza">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj5" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[5]</div>
+                      <div class="inline-block align-top max-w-2xl">ČTK, Hospodářské noviny. Česko patří k nejlevnějším zemím pro průjezd kamionů, ukázala nová analýza. Sto kilometrů je tu o 300 korun levnější než v Německu nebo Polsku [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://domaci.ihned.cz/c1-66540660-cesko-patri-k-nejlevnejsim-evropskym-zemim-pro-tranzit-kamionu-i-proto-vyuzivaji-zahranicni-dopravci-cesko-jako-tranzitni-zemi">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj6" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[6]</div>
+                      <div class="inline-block align-top max-w-2xl">Databáze strategií Ministerstva dopravy ČR. Dostupné <a class="text-fxactivecolor underline" href="https://www.databaze-strategie.cz/cz/md/strategie">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj7" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[7]</div>
+                      <div class="inline-block align-top max-w-2xl">Hospodářská komora ČR. 108/19 Rozpočet Státního fondu dopravní infrastruktury na rok 2020 a střednědobý výhled na roky 2021 a 2022; T: 3. 9. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://1url.cz/vK10Q">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj8" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[8]</div>
+                      <div class="inline-block align-top max-w-2xl">Dopravní federace nevládních neziskových organizací, o. s. Desatero problémů a opatření potřebných k zavedení dobré správy v investicích MD – Investice do velkých dopravních staveb potřebují změnu! Dostupné <a class="text-fxactivecolor underline" href="http://www.pruhlednadoprava.cz/desatero-pro-dopravni-stavby/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj9" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[9]</div>
+                      <div class="inline-block align-top max-w-2xl">Hospodářská komora ČR. 85/20 Dopravní politika ČR pro období 2021–2027 s výhledem do roku 2050; T: 24. 7. 2020. Dostupné <a class="text-fxactivecolor underline" href="https://www.komora.cz/legislation/85-20-dopravni-politika-cr-pro-obdobi-2021-2027-s-vyhledem-do-roku-2050-t24-7-2020/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj10" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[10]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, O. Pozměňovací návrh č. 7450 k sněmovnímu tisku č. 756. Dostupné <a class="text-fxactivecolor underline" href="/documents/29/Doprava_Vzajemne_propojena_zdroj10_pozmenovaciPolansky.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj11" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[11]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, O. Raději rychlovlaky, než kanál Dunaj–Odra–Labe. MF Dnes, 17. 8. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://1url.cz/eK104">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj12" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[12]</div>
+                      <div class="inline-block align-top max-w-2xl">Piráti. Zákon o urychlení výstavby infrastruktury míří ze Sněmovny do Senátu, Piráti v něm prosadili ochranu vlastníků. Dostupné <a class="text-fxactivecolor underline" href="https://www.pirati.cz/tiskove-zpravy/pirati-prosadili-ochranu-vlastniku-do-noveho-zakona-o-vystavbe-infrastruktury.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj13" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[13]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, O. Jak se v Česku vaří zákony. www.ondrejpolansky.cz [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="http://ondrejpolansky.cz/doprava/2018/02/10/jak-se-vari-zakony.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj14" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[14]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, O. Vláda navýšila investice do dopravy. Opravdu se z krize proinvestujeme, nebo nás čeká jen další chaotické betonování? Pirátské listy [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-3509-vlada-navysila-investice-do-dopravy-opravdu-se-z-krize-proinvestujeme-nebo-nas-ceka-jen-dalsi-chaoticke-betonovani">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj15" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[15]</div>
+                      <div class="inline-block align-top max-w-2xl">Pirátské listy. Piráti jsou proti koridoru Dunaj–Odra–Labe. Přínosy pro ekonomiku sporné, ekologické dopady drtivé [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-3461-pirati-jsou-proti-koridoru-dunaj-odra-labe-prinosy-pro-ekonomiku-sporne-ekologicke-dopady-drtive">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj16" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[16]</div>
+                      <div class="inline-block align-top max-w-2xl">LIČKA, J. Plánování infrastruktury v podmínkách volebních období aneb My nic, to předchozí vlády. Pirátské listy. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-3438-planovani-infrastruktury-v-podminkach-volebnich-obdobi-aneb-my-nic-to-predchozi-vlady">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj17" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[17]</div>
+                      <div class="inline-block align-top max-w-2xl">LIČKA, J. Příběhy středočeských dálnic: nastartujte bagry, zbytek dořešíme cestou. Piráti – Středočeský kraj [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://stredocesky.pirati.cz/aktuality/pribehy-stredoceskych-dalnic-nastartujte-bagry-zbytek-doresime-cestou.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj18" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[18]</div>
+                      <div class="inline-block align-top max-w-2xl">LIČKA, J. Poučení z krizového vývoje roku 2020. Piráti – Středočeský kraj [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://stredocesky.pirati.cz/aktuality/poceni-z-krizoveho-vyvoje-roku-2020.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj19" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[19]</div>
+                      <div class="inline-block align-top max-w-2xl">KALIŠ, O., KOPAS, M. Problémy integrace dopravy ve Středočeském kraji. Piráti – Středočeský kraj [cit. 20. 4. 2021]. Dostupné<a class="text-fxactivecolor underline" href="https://stredocesky.pirati.cz/aktuality/problemy-integrace-dopravy-ve-stredoceskem-kraji.html"> zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj20" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[20]</div>
+                      <div class="inline-block align-top max-w-2xl">POLANSKÝ, O. Ještě k problematice železničních přejezdů. Pirátské listy [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-2955-ondrej-polansky-jeste-k-problematice-zeleznicnich-prejezdu">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj21" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[21]</div>
+                      <div class="inline-block align-top max-w-2xl">LIČKA, J. Už to zase rozkopali! aneb Řešení kvadratury kruhu v koordinaci výstavby infrastruktury. Piráti – Středočeský kraj [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://stredocesky.pirati.cz/aktuality/uz-to-zase-rozkopali-aneb-reseni-kvadratury-kruhu-v-koordinaci-vystavby-infrastruktury.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj22" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[22]</div>
+                      <div class="inline-block align-top max-w-2xl">ŽIDEK, V. PASPORTY jako nástroj chytré správy dopravních cest. Pirátské listy [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-2519-vaclav-zidek-pasporty-jako-nastroj-chytre-spravy-dopravnich-cest">zde</a>.</div>
+                    </div>
+                    
+        <div id="zdroj23" class="source leading-loose text-sm">
+          <div class="inline-block align-top w-9 text-fxactivecolor">[23]</div>
+          <div class="inline-block align-top max-w-2xl">LIČKA, J., WITOSZ, D. Železnice propojená s Evropou patří mezi pirátské dopravní priority. Pirátské listy [cit. 20. 4. 2021]. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-2391-jan-licka-a-david-witosz-zeleznice-propojena-s-evropou-patri-mezi-piratske-dopravni-priority">zde</a>.</div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="container-collapsible-button-container w-full">
+      <button class="container-collapsible-button btn btn--icon text-lg block mx-auto" onclick="this.parentElement.parentElement.classList.add('container-collapsible-open');">
+        <div class="btn__body-wrap">
+          <div class="btn__body py-8 leading-4">Zobrazit více</div>
+          <div class="btn__icon px-8 bg-grey-800 border-grey-500">
+            <i class="ico--chevron-right"></i>
+          </div>
+        </div>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+<script>
+  /*should run once on any page accordeon rows with fadeouts are present*/
+  document.addEventListener("DOMContentLoaded", setMaxHeightsFadeouts);
+  window.addEventListener('resize', setMaxHeightsFadeouts);
+
+  function setMaxHeightsFadeouts() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--fadeout');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = (parseInt(accordeonRowBodies[i].scrollHeight) + 32) + "px";
+      }; /*plus padding*/
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setMaxHeights);
+  window.addEventListener('resize', setMaxHeights);
+
+  function setMaxHeights() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--classic');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = accordeonRowBodies[i].scrollHeight + "px";
+      };
+    }
+  }
+</script>
+

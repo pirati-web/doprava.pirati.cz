@@ -1,0 +1,27 @@
+---
+layout: default
+title: Silniční doprava v ČR - Piráti
+description:  Silniční doprava v ČR - Piráti
+keywords: Silniční doprava v ČR - Piráti
+---
+
+
+<div class="row">
+  <div class="columns">
+    <div class="o-section">
+      <div class="o-section-inner">
+          <header class="c-page-header">
+            <h1 itemprop="headline" class="c-page-title"> Silniční doprava v ČR</h1>
+          </header>
+          {% assign tag = 'silniční-doprava'   %}
+          <ul>
+          {% for post in site.tags[tag] limit:12 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+          </ul><hr><hr>
+         {% assign posts=site.tags[tag] %} 
+         {% include articles/list-responsive.html posts=posts %}
+         {% include articles/pagination.html paginator=paginator %}
+      </div>
+    </div>
+  </div>
+</div>

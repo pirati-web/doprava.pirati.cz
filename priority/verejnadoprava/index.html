@@ -1,0 +1,546 @@
+---
+layout: default
+title:  Priority v dopravě - Veřejná doprava lidských rozměrů
+description: Priority v dopravě - Veřejná doprava lidských rozměrů
+keywords: Priority v dopravě, Veřejná doprava lidských rozměrů
+---
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-180.png" sizes="180x180">
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-120.png" sizes="120x120">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styleguide.min.css">
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styles.css">
+  <style type="text/css">
+    sup {
+      white-space: nowrap;
+    }
+    .head-alt-highlighted {
+      line-height: 1.2 !important;
+    }
+  </style>
+
+
+<div class="side-cta-panel--filter" id="side-cta-filter"></div>
+
+<div class="side-cta-panel-bar-wrapper">
+  <div class="side-cta-panel-bar" id="cta-side-bar" onclick="document.body.classList.add('ctaopen');getElementById('side-cta-filter').classList.add('side-cta-panel--filter--ctaopen');getElementById('cta-side').classList.add('side-cta-panel--ctaopen');">
+    <div class="side-cta-panel-bar--toggler"></div>
+    <div class="side-cta-panel-bar-el img-news bg-acidgreen elevation-6 hover:bg-darkacidgreen hover:elevation-1 transition-all cursor-pointer"></div>
+    <div class="side-cta-panel-bar-el img-help bg-lemon elevation-6 hover:bg-opacity-70 hover:elevation-1 transition-all cursor-pointer"></div>
+    <div class="side-cta-panel-bar-el img-support bg-white elevation-6 hover:bg-opacity-70 hover:elevation-1 transition-all cursor-pointer"></div>
+  </div>
+</div>
+
+    
+<div class="container container-default pt-4 pb-20">
+  <div class="w-full lg:w-4/6 relative container-collapsible">
+
+    <div class="floating-nav-wrapper hidden xl:block" id="floatingNavBarWrapper">
+      <div class="floating-nav-panel " id="floatingNavBar">
+        <div class="opener py-6 pb-16 px-11 bg-acidgreen text-white font-alt">
+          RYCHLÁ NAVIGACE
+        </div>
+        <div class="inner float-panel-inner elevation-2">
+          <ul>
+            <li><a href="#takhle-to-dal-nejde">Takhle to dál nejde</a></li>
+            <li><a href="#v-cem-je-problem">V čem je problém</a></li>
+            <li><a href="#nase-vize">Naše vize</a></li>
+            <li><a href="#jak-to-chceme-udelat" class="active">Jak to chceme udělat?</a></li>
+            <li><a href="#kolik-na-to-chceme-casu">Kolik na to chceme času?</a></li>
+            
+              <li><a href="#pro-koho-to-chceme-hlavne">Pro koho to chceme hlavně</a></li>
+            
+            <li><a href="#co-pro-to-uz-delame">Co pro to už děláme</a></li>
+            <li><a href="#na-co-se-nas-casto-ptate">Na co se nás často ptáte</a></li>
+            
+              <li><a href="#souvisejici-body">Související body</a></li>
+            
+            <li><a href="#zdroje">Klidně si to ověřte</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", onLoadFunction);
+      var anchorsArray = [];
+
+      function placeUponId(id, space) {
+        return document.getElementById(id).getBoundingClientRect().top + window.scrollY - space;
+      }
+
+      function onLoadFunction(e) {
+        var anchorElemsArray;
+        onResizeFunction();
+        for (const entry of anchorsArray) {
+          entry.menuitem.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+          e.preventDefault();
+          var id = this.getAttribute("href").replace("#", "");
+          console.log(placeUponId(id, 20));
+          scroll({
+            top: placeUponId(id, 20),
+            behavior: "smooth"
+          });
+        }
+
+
+        window.addEventListener("resize", onResizeFunction);
+      }
+
+      function onResizeFunction(e) {
+        var itemsProcessed = 0;
+        var anchorElemsArray = document.getElementsByClassName("float-panel-inner")[0].querySelectorAll("li a");
+        anchorsArray = [];
+        anchorElemsArray.forEach(function(entry) {
+          var id = entry.getAttribute("href").replace("#", "");
+          anchorsArray.push({
+            id: id,
+            top: placeUponId(id, 200),
+            menuitem: entry
+          });
+          itemsProcessed++;
+          if (itemsProcessed === anchorElemsArray.length) {
+            anchorsArray.reverse();
+          }
+        });
+        console.log(anchorsArray);
+      }
+      window.onscroll = function() {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        var activereached = false;
+        anchorsArray.forEach(function(entry) {
+          entry.menuitem.classList.remove("active");
+          entry.menuitem.classList.remove("passed");
+          if (top >= placeUponId(entry.id, 200)) {
+            if (activereached) entry.menuitem.classList.add("passed");
+            else entry.menuitem.classList.add("active");
+            activereached = true;
+          }
+        });
+      };
+    </script>
+
+    <header class="w-full md:w-5/6">
+      <div class="mt-10 md:mt-12">
+        <h1 class="head-alt-md md:head-alt-lg head-alt-highlighted">Veřejná doprava lidských rozměrů</h1>
+        <h2 class="head-alt-sm md:head-alt-md mb-20 mt-9">
+          <div class="leading-tight"><p data-block-key="t7a9y">Společný cíl? Cestovat pohodlně a bezpečně, neplýtvat energií ani časem! Nezakazujme auta – budujme prostředí, kde nejsou nepostradatelná.</p></div>
+        </h2>
+      </div>
+    </header>
+
+    <div class="problem-pack">
+      <section id="takhle-to-dal-nejde" class="program-detail-problem-solution mb-20">
+
+        <div class="problem-cross"><i class="ico--thincross text-xs sm:text-xl text-white"></i></div>
+        <div class="problem-inner content-block">
+
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Takhle to dál nejde</h2>
+          <p class="text-base mb-8 para">
+            <p data-block-key="954kf">Chybí podpora ekologičtějších způsobů dopravy. Motorová doprava – drahá a nešetrná ke zdraví a životnímu prostředí – by neměla být považována za jediný a hlavní nástroj osobní mobility. Neefektivní zadávání zakázek ve veřejné dopravě poškozuje objednatele, cestující i dopravce.<a href="#zdroje"><sup>[15]</sup></a></p>
+          </p>
+
+          <div id="v-cem-je-problem">
+            <div class="accordeon-row accordeon-row--fadeout h-full">
+              <div class="accordeon-row-head" v-on:click="toggleElement" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+                <h3 class="accordeon-row-heading head-alt-xs mb-0">V čem je problém</h3>
+                <i class="ico--chevron-down"></i>
+              </div>
+              <div class="accordeon-row-body accordeon-row-body--fadeout" style="height: 220px; max-height: 560px;">
+                <div>
+                  <p data-block-key="aqxk7">Neplýtvejme energií a časem: ročně každý z nás ztratí v kolonách téměř den života.<a href="#zdroje"><sup>[5]</sup></a> V číslech to znamená ztrátu 13 miliard korun pro celou společnost!<a href="#zdroje"><sup>[9, 13]</sup></a><br/><br/>Energie je pro řadu lidí neuchopitelná moderní forma magie, jejíž používání ale něco stojí. Žádný člen vlády není Harry Potter a nemá k ruce Ministerstvo kouzel, aby vyrobil něco z ničeho. Proto ideově pracujeme s energií jako formou měny.<br/> Naším cílem je zkrátka dosahovat cílů s menším úsilím: odtud energ(et)ická lenost.<br/><br/> Řečeno dopravní terminologií máme na mysli bezmotorovou a sdílenou mobilitu, posilování veřejné hromadné dopravy, efektivnější vytěžování spojů díky pružné nabídce přepravních služeb – od mikrobusů a obecních taxislužeb, po páteřní sítě mezinárodních rychlovlaků.<a href="#zdroje"><sup>[2]</sup></a></p><p data-block-key="pikxv">Česká republika si stanovila závazek<a href="#zdroje"><sup>[1]</sup></a> snížit do roku 2030 spotřebu energie o 8 procent a prudce snížit emise CO2. V dopravě máme ale opačný trend. Spotřeba energie i emise CO2 rostou každoročně o několik procent.<a href="#zdroje"><sup>[3]</sup></a></p><p data-block-key="omvxy">Tohoto nemůžeme dosáhnout prostou záměnou zdroje pohonu automobilů, ale pouze změnou filozofie mobility jako celku. Vycházíme z ideje celoevropské iniciativy Shared Mobility Principles for Livable Cities<a href="#zdroje"><sup>[8]</sup></a>, která lze shrnout dvěma větami:</p><p data-block-key="a8tlm">Kam můžete v krátkém čase dojít, nemá smysl jezdit. Kam vás může svézt někdo jiný, nemá smysl řídit sám. </p><p data-block-key="g018y">Dokončeme to, nad čím nás přiměla přemýšlet pandemie: aby se zamezilo každodennímu přesunu velkého množství lidí. Podporujme distanční celoživotní vzdělávání, coworkingové kanceláře nebo práci z domova – a to i pro státní zaměstnance. <br/><br/>Kde to bude mít ekonomický smysl, nebojme se pro dosažení cílů nové mobility kopírovat nebo vyvíjet vlastní inovativní řešení jako autonomní kamiony, chytré parkovací systémy, nákladní tramvaje nebo modulární autobusy.</p>
+                </div>
+              </div>
+              <button class="btn btn--icon absolute bottom-8 left-8" onclick="this.parentElement.classList.add('accordeon-row--open');">
+                <div class="btn__body-wrap">
+                  <div class="btn__body bg-acidgreen -bottom-20 text-black py-4">Zobrazit více</div>
+                  <div class="btn__icon bg-black">
+                    <i class="ico--chevron-right"></i>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="nase-vize" class="ideal-check"><i class="ico--check text-xs sm:text-xl text-black"></i></div>
+        <div class="ideal-inner bg-lemon content-block">
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Naše vize</h2>
+          <p class="text-base">
+            <p data-block-key="7gpud">Stát poskytne obcím a krajům maximální podporu, aby sladily dopravu autem, na kole a pěšky i sdílenou a hromadnou dopravou. Smlouvy na vlaky a autobusy veřejné dopravy budeme soutěžit otevřeně. Zlepšíme tak veřejné rozpočty, spokojenost lidí a snížíme dopad na životní prostředí. </p>
+          </p>
+        </div>
+
+      </section>
+    </div>
+
+    <div id="jak-to-chceme-udelat" class="container-collapsible-content" style="height: 50vh;">
+
+      <h3 class="head-alt-base mb-8">Jak to chceme udělat?</h3>
+      <div class="content-block">
+        <h4 class="pl-11 font-bold text-xl mb-4" data-block-key="fck3j">Efektivní doprava uvnitř sídel i mezi nimi</h4><ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="5mnl3">Na základě zahraničních zkušeností vytvoříme podmínky pro rozvoj bezmotorové i sdílené mobility. Odstraníme legislativní bariéry a vytvoříme doporučení, jak řešit technické překážky, které brání dosáhnout ideálního výsledného stavu.</li><li class="mb-4" data-block-key="6bqta">Na základě analýzy vytvoříme motivační podmínky (např. zvýhodnění pravidelných uživatelů) pro rozvoj i větší využívání veřejné a nemotorové dopravy. </li><li class="mb-4" data-block-key="cvdx2">Zpracujeme celostátní dopravní strategii proměny sídel na města krátkých vzdáleností<a href="#zdroje"><sup>[12] </sup></a>– <a href="https://www.cityone.cz/viden-mesto-kratkych-vzdalenosti/t6953">viz příklad Vídně</a>. </li><li class="mb-4" data-block-key="xjn4a">Zvýšíme obecné povědomí osvětou v oblasti veřejné dopravy, bezmotorové dopravy i bezpečného pohybu. </li><li class="mb-4" data-block-key="hdisp">Budeme sdílet zkušenosti měst, která s transformací již začala. </li></ul><h4 class="pl-11 font-bold text-xl mb-4" data-block-key="85fzx">Otevřené soutěžení kontraktů v dopravě</h4><ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="q9l6h">Definujeme parametry a standardy kvality dopravních služeb.</li><li class="mb-4" data-block-key="e8f51">Součástí výběrových řízení bude závazný harmonogram (nejen termíny začátků plnění, ale i vypsání výběrového řízení a uzavření smlouvy).</li><li class="mb-4" data-block-key="emgm1">Vytvoříme metodiky pro transparentní tržní konzultace, aby se dopravci předem seznámili s požadavky.</li><li class="mb-4" data-block-key="zsvz1">Zajistíme dostatečnou kapacitu Ministerstva dopravy pro metodickou pomoc dalším zadavatelům – krajům a městům.</li><li class="mb-4" data-block-key="8ah0p">Ve spolupráci s dalšími resorty (Ministerstvo financí atd.) připravíme komplexní „kuchařku“, tedy popis správné praxe řešící problematiku zadávání dopravních služeb z hlediska nejen dopravní a zakázkové, ale i daňové a účetní stránky (jednorázová investice ve výši 10 milionů korun). </li></ul>
+      </div>
+
+      <div id="kolik-na-to-chceme-casu" class="grid grid-cols-1 gap-8 my-20">
+        
+        
+          <div class="card shadow-none bg-grey-125">
+            <div class="card__body content-block">
+              <h3 class="card-headline mb-8">Kolik na to chceme času?</h3>
+              <p class="card-body-text para"><p data-block-key="mfyyp">S (mikro)analýzami a komunikací s obcemi jsme začali už v opozici. Pokud má být výsledkem funkční integrované řešení, nelze nechat problematiku přeměny mobility jen na samosprávách.</p><p data-block-key="th26n">Sdílením zkušeností a odstraňováním předsudků k bezmotorové dopravě jako formě rekreační zábavy lze dosáhnout dílčích koordinačních úspěchů i z opozice.<br/><br/>Vzhledem k aktuálnímu nasměrování zdrojů z EU do této oblasti bude možné pozitivní hmatatelný a viditelný efekt pozorovat v horizontu jednoho volebního období – svezeme se na vlně, kde je vlastně jen potřeba vyčistit cestu od zbytečné byrokracie. Dále je nutné umět vysvětlit lidem dané přínosy.</p><p data-block-key="aio5x">Otevřená soutěž VHD: Příprava správné praxe jeden rok, poté v následujících 10–15 letech postupná aplikace na všechny nově soutěžené smlouvy tak, jak budou dobíhat již dříve uzavřené smlouvy.</p></p>
+            </div>
+          </div>
+        
+      </div>
+
+      
+        <h3 id="pro-koho-to-chceme-hlavne" class="head-alt-base mb-8 mt-20">Pro koho to chceme hlavně</h3>
+      
+
+      
+        <div class="program-detail-benefity my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8">
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/1.b701cb996af2.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro mladé</p>
+    <div class="text-sm"><p data-block-key="6z5hk">Aktivní a bezemisní doprava posílí zdraví, zmenší stres a rozšíří možnosti, jak se dostat z místa na místo. Navíc může být zdrojem zábavy!</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/2.75d99efbb2ae.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro rodiny s dětmi</p>
+    <div class="text-sm"><p data-block-key="0vfv3">Zklidnění provozu v ulicích a lepší veřejná doprava bude pro rodiny méně stresující při dělení času mezi povinnostmi a koníčky.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/3.3d83dc0642e6.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro lidi ve zralém věku</p>
+    <div class="text-sm"><p data-block-key="5x2a1">Efektivní veřejná doprava přiláká nové cestující, kteří tak uvolní místo na silnicích a k parkování.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/4.0f3cae79528f.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro seniory</p>
+    <div class="text-sm"><p data-block-key="d5zp7">Kvalitní, bezbariérová a promyšleně budovaná infrastruktura s návaznostmi neklade dodatečné překážky pohybu.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/5.b3723c211aec.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro zaměstnance</p>
+    <div class="text-sm"><p data-block-key="nlo16">Ušetřené peníze dáme na zkvalitnění hromadné dopravy. Pravidelné dojíždění do práce bude možné dlouhodobě plánovat.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/6.531fbb7e7cdf.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro živnostníky a podnikatele</p>
+    <div class="text-sm"><p data-block-key="rvhqn">Snížíme náklady na logistiku. Firmy ušetří, jelikož se včas dozví, kdo bude v příštích obdobích zajišťovat dopravu, a mohou tak lépe plánovat.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/7.c31ca4ceaad6.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro lidi ve finanční tísni</p>
+    <div class="text-sm"><p data-block-key="ef7en">Efektivní veřejná doprava bude znamenat i peněžní úspory a rozšíření a zlevnění nabídky přepravních služeb.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/8.191fffeb5c56.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro nás pro všechny</p>
+    <div class="text-sm"><p data-block-key="ksjt0">Zvýšíme kvalitu života – ušetříme čas a peníze, snížíme emise, stres i nehodovost, zlepšíme kvalitu životního prostředí.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/9.754b84f78864.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro veřejné finance</p>
+    <div class="text-sm"><p data-block-key="rw7la">Snížíme náklady na výstavbu a obnovu infrastruktury využitím souběhu stavebních akcí. Snížíme emise, nehodovost i potřebu zdravotní péče.</p></div>
+  </div>
+</div>
+
+          
+        </div>
+      
+
+      
+
+      
+
+      <h3 id="co-pro-to-uz-delame" class="head-alt-base mt-20 mb-10">Co pro to už děláme</h3>
+      <div class="content-block">
+        <p data-block-key="a7gvy"></p><ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="xjl52">Participovali jsme s Asociací pro elektromobilitu na prosazení jednodušší <a href="https://euractiv.cz/section/doprava/news/cesko-na-ceste-k-elektromobilite-chybi-nezbytna-infrastruktura-i-zajem-obcanu/">výstavby nabíjecí infrastruktury</a> v zákoně 416/2009. Podporujeme zavedení úsporného nabíjení elektromobilů z veřejného osvětlení v <a href="https://zpravy.aktualne.cz/ekonomika/auto/lampa-jako-nabijecka-elektromobilu-praha-uvazuje-jestli-lze/r~9ff729de096011eb80e60cc47ab5f122/">Praze</a>, <a href="https://tabor.pirati.cz/zastupitele/">Táboře</a> a dalších městech.</li><li class="mb-4" data-block-key="jzywo">V Praze jsme zavedli <a href="https://greengo.com/cz/">sdílenou (elektro)mobilitu</a>.</li><li class="mb-4" data-block-key="nctsv">Pořádáme debaty, publikujeme články k tématu:<br/> – <a href="https://www.profant.eu/2020/cyklistika-ve-meste.html">Cyklistika ve městech</a>, září 2020<br/>– <a href="https://www.piratskelisty.cz/clanek-2321-zeneme-se-do-slepe-ulicky-na-razantni-prechod-na-elektromobilitu-nejsme-pripraveni">Nepřipravená elektromobilita</a>, březen 2019<br/>– <a href="https://www.piratskelisty.cz/clanek-1900-nova-mobilita-samohyby-spotrebice-a-sdilena-sedacka">Nová mobilita</a>, březen 2018<br/>a další.</li><li class="mb-4" data-block-key="c2ocu">Na radnicích českých měst a obcí Starostové a Piráti dlouhodobě prosazují principy měst krátkých vzdáleností a energetické lenosti.<a href="#zdroje"><sup>[16]</sup></a></li></ul>
+      </div>
+
+      <h3 id="na-co-se-nas-casto-ptate" class="head-alt-base mb-8 mt-20">Na co se nás často ptáte</h3>
+      <div class="space-y-1">
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Zní to radikálně, to tu nikdy neprojde...</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="gnwoj">Piráti a Starostové v podstatě požadují jen to, aby se realizovalo, o čem se roky teoreticky diskutuje! Problém u nás je zejména mezi židlí a monitorem, v ochotě změnit svoje sobecké spotřebitelské chování vůči společnosti i krajině.<br/><br/> Jinde ve světě, kde nemají chuť či možnost rozhazovat veřejné finance (ať už v rozvojové Africe, Asii nebo Holandsku a Dánsku), tyto koncepty přirozeně fungují – nevymýšlíme kolo tam, kde se stačí inspirovat. Nového přinášíme „jen“ to, že navrhujeme konkrétní kroky vedoucí k faktické realizaci záměrů, které na teoretické úrovni podporuje i naše vlastní Ministerstvo dopravy.<a href="#zdroje"><sup>[3]</sup></a></p></p>
+    </div>
+  </div>
+</div>
+
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">chceme utrácet méně a chytřeji než dnes</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="2svrl">To, že sdílenou dopravou každý z nás šetří čas a peníze, když v jednom vozidle místo sólo řidiče jede 4 nebo 40 osob, asi není třeba vysvětlovat. Méně kouřících aut v ulicích – ať už díky bezemisním řešením nebo hromadné dopravě – znamená nejen méně hluku, ale úlevu pro celý zdravotnický systém.</p><p data-block-key="nzoqe">Náklady a přínosy bezmotorové dopravy jsou dobře shrnuté v britském projektu Gear Change<a href="#zdroje"><sup>[6]</sup></a> – srovnatelné analýzy pro české prostředí plánujeme souhrnným způsobem zveřejnit, jakmile dostaneme přístup ke zdrojům ministerstev.<br/><br/> V Kodani využívá kolo 49 procent obyvatel k pohybu po městě, v Praze je to stěží 1 procento.<a href="#zdroje"><sup>[10]</sup></a> Jestliže v Británii jen cyklodoprava přispívá do ekonomiky 5,4 miliardami liber, kolik by to mohlo být u nás, kdybychom se neomezovali na dekorativní panáčky namalované na vozovce, ale vytvářeli bezpečné, funkčně oddělené stezky?</p></p>
+    </div>
+  </div>
+</div>
+
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Chcete vyhnat auta z měst?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="klcc4">Ve veřejném prostoru chceme pro auta prostor přiměřený jejich užitku. Jak potvrdí i developeři, vybudovat jedno parkovací místo představuje náklad stovek tisíc korun.<a href="#zdroje"><sup>[18]</sup></a> A ani na silnici není stání zadarmo, vezmeme-li v úvahu, že se jedná o zábor 10 m² stavebního pozemku.<br/> Naším cílem je vytvořit dostatečný prostor lidem, aby se mohli beze strachu, volně a zdravě pohybovat v nejbližším okolí svého bydliště, bez nutnosti uzavírat se do ochranné skořápky vozidel. </p></p>
+    </div>
+  </div>
+</div>
+
+        
+      </div>
+
+      
+        <h3 id="souvisejici-body" class="head-alt-base mb-8 mt-20">Související body:</h3>
+
+        <div class="carousel-card-list __js-root">
+          <ui-app inline-template>
+            <ui-carousel>
+              <!--<carousel :perPage="4" :perPageCustom="[ [200, 1], [768, 3], [1024, 4]]" :navigationEnabled="true" :navigationNextLabel="nextlabel" :navigationPrevLabel="prevlabel" class="article-card-list pt-12 pb-8">-->
+              <carousel :per-page=1 :navigation-enabled="true" class="article-card-list pb-8">
+
+                <slide>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8">
+
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/pokrokova-a-udrzitelna-energetika/">Pokroková a udržitelná energetika</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/pokrokova-a-udrzitelna-energetika/"><p data-block-key="z1crn">Dejme Česku čistou šťávu! Moderní přístup k energetice je nutný nejen pro zdravější životní prostředí, ale i pro zdravější ekonomiku.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/mirnejsi-vedra-ve-mestech/">Mírnější vedra ve městech</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/mirnejsi-vedra-ve-mestech/"><p data-block-key="79qmb">Letní dny ve městech jsou peklo. Pojďme horku čelit chytrým snižováním teploty: vodními toky, zelení, zužitkováním dešťů.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/cistsi-zivotni-prostredi/">Čistší životní prostředí</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/cistsi-zivotni-prostredi/"><p data-block-key="0t4xa">Tady jde o zdraví! Donuťme znečišťovatele přijmout čistší alternativy. Sobě prodloužíme kvalitní život, dětem zajistíme zdravější dětství.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+
+                  </div>
+                </slide>
+
+              </carousel>
+            </ui-carousel>
+          </ui-app>
+        </div>
+      
+
+      <h3 id="zdroje" class="head-alt-base mb-8 mt-20">Klidně si to ověřte</h3>
+      <div class="content-block">
+        
+                    <div id="zdroj1" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[1]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo dopravy. Vnitrostátní plán České republiky v oblasti energetiky a klimatu. Dostupné <a class="text-fxactivecolor underline" href="https://www.mpo.cz/assets/cz/energetika/strategicke-a-koncepcni-dokumenty/2020/1/Vnitrostani-plan-CR-v-oblasti-energetiky-a-klimatu_final.docx">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj2" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[2]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo dopravy. Koncepce veřejné dopravy 2020–2025. Dostupné <a class="text-fxactivecolor underline" href="https://www.mdcr.cz/getattachment/Media/Media-a-tiskove-zpravy/Vlada-schvalila-koncepci-verejne-dopravy,-resi-zaj/ma_KORNBTR9Q5NP.docx.aspx">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj3" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[3]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo dopravy. Dopravní politika České republiky pro období 2021–2027 s výhledem do roku 2050. Dostupné <a class="text-fxactivecolor underline" href="https://www.komora.cz/legislation/85-20-dopravni-politika-cr-pro-obdobi-2021-2027-s-vyhledem-do-roku-2050-t24-7-2020/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj4" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[4]</div>
+                      <div class="inline-block align-top max-w-2xl">Wikipedia. Obecně k energetické efektivitě (a plýtvání). Dostupné <a class="text-fxactivecolor underline" href="https://en.wikipedia.org/wiki/Energy_efficiency_in_transport#cite_note-:1-13">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj5" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[5]</div>
+                      <div class="inline-block align-top max-w-2xl">Eurostat – jak na tom jsme. Dostupné <a class="text-fxactivecolor underline" href="https://ec.europa.eu/eurostat/statistics-explained/index.php/Transport">zde</a> a <a class="text-fxactivecolor underline" href="https://ec.europa.eu/transport/facts-fundings/scoreboard/compare/energy-union-innovation/road-congestion_en">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj6" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[6]</div>
+                      <div class="inline-block align-top max-w-2xl">Gear change – příklady dobré praxe. Dostupné <a class="text-fxactivecolor underline" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/904146/gear-change-a-bold-vision-for-cycling-and-walking.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj7" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[7]</div>
+                      <div class="inline-block align-top max-w-2xl">Strategie veřejné dopravy (Nizozemí). Dostupné <a class="text-fxactivecolor underline" href="https://www.emta.com/IMG/pdf/brochure.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj8" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[8]</div>
+                      <div class="inline-block align-top max-w-2xl">Shared Mobility Principles for Livable Cities. Dostupné <a class="text-fxactivecolor underline" href="https://www.sharedmobilityprinciples.org/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj9" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[9]</div>
+                      <div class="inline-block align-top max-w-2xl">Vlastní výpočty</div>
+                    </div>
+                    
+                    <div id="zdroj10" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[10]</div>
+                      <div class="inline-block align-top max-w-2xl">Cycling facts and figures (ECF). Dostupné <a class="text-fxactivecolor underline" href="https://ecf.com/resources/cycling-facts-and-figures">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj11" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[11]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo životního prostředí. Strategický rámec ČR 2030. Dostupné <a class="text-fxactivecolor underline" href="https://www.cr2030.cz/strategie/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj12" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[12]</div>
+                      <div class="inline-block align-top max-w-2xl">Strategie dopravní obsluhy území. Str. 6: „Sumární odpovědnost regionů a obcí je tak značná, protože finanční ingerence dosahuje výše téměř 20 mld. Kč.“ Dostupné <a class="text-fxactivecolor underline" href="https://www.dataplan.info/img_upload/7bdb1584e3b8a53d337518d988763f8d/sdo.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj13" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[13]</div>
+                      <div class="inline-block align-top max-w-2xl">Raiffeisenbank. Může kvalita silnic ovlivnit ekonomický růst? Analýza RB. Srpen 2019. Dostupné <a class="text-fxactivecolor underline" href="/documents/31/Doprava_Vzajemne_propojena_zdroj2_Dopravni_infrastruktura_shrtcut.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj14" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[14]</div>
+                      <div class="inline-block align-top max-w-2xl">Poved. Konkurence na trhu regionální železniční dopravy. 2010. Dostupné <a class="text-fxactivecolor underline" href="http://www.itregep.cz/media/65427/benediktov__2010.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj15" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[15]</div>
+                      <div class="inline-block align-top max-w-2xl">WEF. The Global Competitiveness Report. 2019. Dostupné <a class="text-fxactivecolor underline" href="http://www3.weforum.org/docs/WEF_TheGlobalCompetitivenessReport2019.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj16" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[16]</div>
+                      <div class="inline-block align-top max-w-2xl">Příklady:<br/>– František Elfmark, <a class="text-fxactivecolor underline" href="https://www.frantisekelfmark.cz/obcanum-mesta-zpristupnen-novy-geograficky-informacni-system-gis/">Uherské Hradiště</a><br/>– Ondřej Profant, <a class="text-fxactivecolor underline" href="https://www.profant.eu/2020/prinos-om.html">Otevřená města</a><br/>– David Witosz, <a class="text-fxactivecolor underline" href="https://ostrava.rozhlas.cz/ostrava-zavede-novy-system-parkovani-volna-mista-v-centru-budou-snimat-senzory-8140086">Chytré parkování</a></div>
+                    </div>
+                    
+                    <div id="zdroj17" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[17]</div>
+                      <div class="inline-block align-top max-w-2xl">Rozpočty Středočeského kraje 2018–2021. Dostupné <a class="text-fxactivecolor underline" href="https://www.kr-stredocesky.cz/web/urad/samosprava/schvaleny-rozpocet;jsessionid=6882C143E61050FCA8AC296A29BFB28D.liferay_s1">zde</a>.</div>
+                    </div>
+                    
+        <div id="zdroj18" class="source leading-loose text-sm">
+          <div class="inline-block align-top w-9 text-fxactivecolor">[18]</div>
+          <div class="inline-block align-top max-w-2xl">iDnes. Jedno místo za 300 tisíc. V Brně chtějí uklidit auta do skeletových domů. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://www.idnes.cz/brno/zpravy/parkovani-reseni-skeletove-domy-brno-ods.A191016_508305_brno-zpravy_krut">zde</a>.<br/><br/>DALŠÍ ZDROJE A INSPIRACE:<br/>– Informace k metodice SUMP 2.0 <a class="text-fxactivecolor underline" href="https://www.akademiemobility.cz/shrnuti">zde</a>.<br/>– Místo aut kola a chodci. Britská vláda využije pandemii k proměně dopravy za 62 miliard – příklad z GB investice ve výši dvou miliard liber na podporu jízdy na kole a chůze. Dostupné <a class="text-fxactivecolor underline" href="https://www.gov.uk/government/publications/cycling-and-walking-plan-for-england">zde</a>.<br/>– Chytré technologie v dopravě <a class="text-fxactivecolor underline" href="https://ictrevue.ihned.cz/c3-66575980-0ICT00_d-66575980-chytre-technologie-ulevi-doprave-ve-mestech">zde</a> a <a class="text-fxactivecolor underline" href="https://www.dobramesta.cz/aktuality/1132/75-prikladu-dobre-praxe-za-rok-2019">zde</a>.<br/>– <a class="text-fxactivecolor underline" href="https://www.dobramesta.cz/">Partnerství pro městskou mobilitu</a> – doprava a mobilita se neplánují na zelené louce a izolovaně.<br/>– <a class="text-fxactivecolor underline" href="https://www.citychangers.cz/">CityChangers</a> – iniciativa ke zlepšení situace v dopravě a jejím plánování.<br/>– How Oslo achieved zero pedestrian and bicycle fatalities, and how others can apply what worked. Dostupné <a class="text-fxactivecolor underline" href="https://www.childinthecity.org/2020/10/14/how-oslo-achieved-zero-pedestrian-and-bicycle-fatalities-and-how-others-can-apply-what-worked/?gdpr=accept">zde</a>.<br/>– Nabídkové řízení na veřejnou dopravu – ne vše bylo ve výběrovém řízení úplně správně, ale úspora více než značná. Dostupné <a class="text-fxactivecolor underline" href="https://www.zelpage.cz/zpravy/9385?oddil=9&amp;lang=cs">zde</a>.<br/>– Soutěž na železnici bude již v budoucnu povinná ve většině případů. Dostupné <a class="text-fxactivecolor underline" href="https://www.mdcr.cz/Dokumenty/Drazni-doprava/Evropska-unie-na-zeleznici/Evropska-unie-na-zeleznici-prehled-evropskych-pr">zde</a>.<br/>– Metrobus – hromadná doprava: Nejvyšší čas soutěžit městské linky. Dostupné <a class="text-fxactivecolor underline" href="https://www.youtube.com/watch?v=kXEyB49I88Q&amp;ab_channel=Metrobus%E2%80%93hromadn%C3%A1doprava">zde</a>.</div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="container-collapsible-button-container w-full">
+      <button class="container-collapsible-button btn btn--icon text-lg block mx-auto" onclick="this.parentElement.parentElement.classList.add('container-collapsible-open');">
+        <div class="btn__body-wrap">
+          <div class="btn__body py-8 leading-4">Zobrazit více</div>
+          <div class="btn__icon px-8 bg-grey-800 border-grey-500">
+            <i class="ico--chevron-right"></i>
+          </div>
+        </div>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  /*should run once on any page accordeon rows with fadeouts are present*/
+  document.addEventListener("DOMContentLoaded", setMaxHeightsFadeouts);
+  window.addEventListener('resize', setMaxHeightsFadeouts);
+
+  function setMaxHeightsFadeouts() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--fadeout');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = (parseInt(accordeonRowBodies[i].scrollHeight) + 32) + "px";
+      }; /*plus padding*/
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setMaxHeights);
+  window.addEventListener('resize', setMaxHeights);
+
+  function setMaxHeights() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--classic');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = accordeonRowBodies[i].scrollHeight + "px";
+      };
+    }
+  }
+</script>
+

@@ -1,0 +1,27 @@
+---
+layout: default
+title: Ekologie v moderní dopravě - Piráti
+description: Ekologické přístupy v moderní dopravě - Piráti
+keywords: ekologie v dopravě, životní prostředí, Piráti
+---
+
+
+<div class="row">
+  <div class="columns">
+    <div class="o-section">
+      <div class="o-section-inner">
+          <header class="c-page-header">
+            <h1 itemprop="headline" class="c-page-title">Ekologické přístupy v moderní dopravě</h1>
+          </header>
+          {% assign tag = 'ekologie'   %}
+          <ul>
+          {% for post in site.tags[tag] limit:12 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+          </ul><hr><hr>
+         {% assign posts=site.tags[tag] %} 
+         {% include articles/list-responsive.html posts=posts %}
+         {% include articles/pagination.html paginator=paginator %}
+      </div>
+    </div>
+  </div>
+</div>

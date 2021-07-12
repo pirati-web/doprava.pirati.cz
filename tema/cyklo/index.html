@@ -1,0 +1,27 @@
+---
+layout: default
+title:  Cyklistika a doprava vlastní silou - Piráti
+description: Cyklistika a doprava vlastní silou - Piráti
+keywords:  Cyklistika a doprava, cykloturistika, Piráti
+---
+
+
+<div class="row">
+  <div class="columns">
+    <div class="o-section">
+      <div class="o-section-inner">
+          <header class="c-page-header">
+            <h1 itemprop="headline" class="c-page-title">Cyklistika a doprava vlastní silou</h1>
+          </header>
+          {% assign tag = 'cyklodoprava'   %}
+          <ul>
+          {% for post in site.tags[tag] limit:12 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+          </ul><hr><hr>
+         {% assign posts=site.tags[tag] %} 
+         {% include articles/list-responsive.html posts=posts %}
+         {% include articles/pagination.html paginator=paginator %}
+      </div>
+    </div>
+  </div>
+</div>

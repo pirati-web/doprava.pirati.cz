@@ -1,0 +1,519 @@
+---
+layout: default
+title:  Priority v dopravě - role v kosmickém programu
+description: Priority v dopravě - role v kosmickém programu
+keywords: Priority v dopravě, role v kosmickém programu
+---
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-180.png" sizes="180x180">
+  <link rel="icon" type="image/png" href="https://www.piratiastarostove.cz/static/elections2021/images/favicon-bw-120.png" sizes="120x120">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styleguide.min.css">
+  <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styles.css">
+  <style type="text/css">
+    sup {
+      white-space: nowrap;
+    }
+    .head-alt-highlighted {
+      line-height: 1.2 !important;
+    }
+  </style>
+
+
+
+<div class="side-cta-panel--filter" id="side-cta-filter"></div>
+
+<div class="side-cta-panel-bar-wrapper">
+  <div class="side-cta-panel-bar" id="cta-side-bar" onclick="document.body.classList.add('ctaopen');getElementById('side-cta-filter').classList.add('side-cta-panel--filter--ctaopen');getElementById('cta-side').classList.add('side-cta-panel--ctaopen');">
+    <div class="side-cta-panel-bar--toggler"></div>
+    <div class="side-cta-panel-bar-el img-news bg-acidgreen elevation-6 hover:bg-darkacidgreen hover:elevation-1 transition-all cursor-pointer"></div>
+    <div class="side-cta-panel-bar-el img-help bg-lemon elevation-6 hover:bg-opacity-70 hover:elevation-1 transition-all cursor-pointer"></div>
+    <div class="side-cta-panel-bar-el img-support bg-white elevation-6 hover:bg-opacity-70 hover:elevation-1 transition-all cursor-pointer"></div>
+  </div>
+</div>
+
+    
+<div class="container container-default pt-4 pb-20">
+  <div class="w-full lg:w-4/6 relative container-collapsible">
+
+    <div class="floating-nav-wrapper hidden xl:block" id="floatingNavBarWrapper">
+      <div class="floating-nav-panel " id="floatingNavBar">
+        <div class="opener py-6 pb-16 px-11 bg-acidgreen text-white font-alt">
+          RYCHLÁ NAVIGACE
+        </div>
+        <div class="inner float-panel-inner elevation-2">
+          <ul>
+            <li><a href="#takhle-to-dal-nejde">Takhle to dál nejde</a></li>
+            <li><a href="#v-cem-je-problem">V čem je problém</a></li>
+            <li><a href="#nase-vize">Naše vize</a></li>
+            <li><a href="#jak-to-chceme-udelat" class="active">Jak to chceme udělat?</a></li>
+            <li><a href="#kolik-na-to-chceme-casu">Kolik na to chceme času?</a></li>
+            
+              <li><a href="#pro-koho-to-chceme-hlavne">Pro koho to chceme hlavně</a></li>
+            
+            <li><a href="#co-pro-to-uz-delame">Co pro to už děláme</a></li>
+            <li><a href="#na-co-se-nas-casto-ptate">Na co se nás často ptáte</a></li>
+            
+              <li><a href="#souvisejici-body">Související body</a></li>
+            
+            <li><a href="#zdroje">Klidně si to ověřte</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", onLoadFunction);
+      var anchorsArray = [];
+
+      function placeUponId(id, space) {
+        return document.getElementById(id).getBoundingClientRect().top + window.scrollY - space;
+      }
+
+      function onLoadFunction(e) {
+        var anchorElemsArray;
+        onResizeFunction();
+        for (const entry of anchorsArray) {
+          entry.menuitem.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+          e.preventDefault();
+          var id = this.getAttribute("href").replace("#", "");
+          console.log(placeUponId(id, 20));
+          scroll({
+            top: placeUponId(id, 20),
+            behavior: "smooth"
+          });
+        }
+
+
+        window.addEventListener("resize", onResizeFunction);
+      }
+
+      function onResizeFunction(e) {
+        var itemsProcessed = 0;
+        var anchorElemsArray = document.getElementsByClassName("float-panel-inner")[0].querySelectorAll("li a");
+        anchorsArray = [];
+        anchorElemsArray.forEach(function(entry) {
+          var id = entry.getAttribute("href").replace("#", "");
+          anchorsArray.push({
+            id: id,
+            top: placeUponId(id, 200),
+            menuitem: entry
+          });
+          itemsProcessed++;
+          if (itemsProcessed === anchorElemsArray.length) {
+            anchorsArray.reverse();
+          }
+        });
+        console.log(anchorsArray);
+      }
+      window.onscroll = function() {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        var activereached = false;
+        anchorsArray.forEach(function(entry) {
+          entry.menuitem.classList.remove("active");
+          entry.menuitem.classList.remove("passed");
+          if (top >= placeUponId(entry.id, 200)) {
+            if (activereached) entry.menuitem.classList.add("passed");
+            else entry.menuitem.classList.add("active");
+            activereached = true;
+          }
+        });
+      };
+    </script>
+
+    <header class="w-full md:w-5/6">
+      <div class="mt-10 md:mt-12">
+        <h1 class="head-alt-md md:head-alt-lg head-alt-highlighted">Významná role v kosmickém programu</h1>
+        <h2 class="head-alt-sm md:head-alt-md mb-20 mt-9">
+          <div class="leading-tight"><p data-block-key="s5oqq">Nastupme včas na palubu evropského kosmického výzkumu. Je to jedinečná příležitost pro naši ekonomiku, vědu i průmysl.<a href="#zdroje"><sup>[1]</sup></a> Kapacity na to máme!</p></div>
+        </h2>
+      </div>
+    </header>
+
+    <div class="problem-pack">
+      <section id="takhle-to-dal-nejde" class="program-detail-problem-solution mb-20">
+
+        <div class="problem-cross"><i class="ico--thincross text-xs sm:text-xl text-white"></i></div>
+        <div class="problem-inner content-block">
+
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Takhle to dál nejde</h2>
+          <p class="text-base mb-8 para">
+            <p data-block-key="9es87">Kosmické aktivity v ČR nejsou řízeny dostatečně strategicky, dlouhodobě a systematicky. Zároveň trpí nedostatečným finančním a institucionálním zabezpečením.<a href="#zdroje"><sup>[2]</sup></a> Hrozí proto, že nám ujede vlak v oblasti průlomových technologií a nových příležitostí v kosmickém sektoru.<a href="#zdroje"><sup>[3]</sup></a></p>
+          </p>
+
+          <div id="v-cem-je-problem">
+            <div class="accordeon-row accordeon-row--fadeout h-full">
+              <div class="accordeon-row-head" v-on:click="toggleElement" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+                <h3 class="accordeon-row-heading head-alt-xs mb-0">V čem je problém</h3>
+                <i class="ico--chevron-down"></i>
+              </div>
+              <div class="accordeon-row-body accordeon-row-body--fadeout" style="height: 220px; max-height: 560px;">
+                <div>
+                  <p data-block-key="rhxcu">V ČR většinu kosmických aktivit zajišťuje Ministerstvo dopravy, nemá k tomu však samostatný odbor. </p><p data-block-key="i1wg1">Kvůli kompetenčnímu zákonu je většina možných kosmických aktivit v rukou jiných resortů (Ministerstvo školství, Ministerstvo obrany, Ministerstvo zahraničních věcí...), ale ty tomu věnují minimální či žádnou pozornost. To se projevuje na jejich akceschopnosti i např. při jednáních Koordinační rady ministra dopravy pro kosmické aktivity, kdy je mnohdy obtížné přimět zbylé resorty ke spolupráci. Od ledna 2021 se Praha stala sídlem Agentury Evropské unie pro vesmírné aktivity (EUSPA), a je tak centrem evropského kosmického programu, s rozpočtem téměř 15 miliard eur na roky 2021–2027.<a href="#zdroje"><sup>[11]</sup></a></p><p data-block-key="sytz9">Máme velice úspěšné projekty v podnikatelském inkubátoru Evropské kosmické agentury (ESA BIC) a aktivní vzdělávací odnož (ESA ESERO), stejně jako velké projekty soukromých firem OHB či SAB Aerospace.<a href="#zdroje"><sup>[15, 16, 17]</sup></a></p><p data-block-key="7wiyw">Přes všechny tyto příležitosti je podpora pro kosmický průmysl a vědu a výzkum krátkozraká a nesystematická. Povědomí o kosmických aktivitách je velice povrchní, politická podpora přinejlepším vratká (např. za předchozího ministra dopravy Dana Ťoka byla sekce na 14 dní zrušena).<a href="#zdroje"><sup>[13, 14]</sup></a></p><p data-block-key="geoq3">Nabízí se také příležitost získat patenty na špičkové technologie, jejichž držiteli budou české firmy a startupy.</p><p data-block-key="swbw7">Máme jedinečnou možnost včas se zapojit do kosmické ekonomiky, která dosahuje obratu půl bilionu dolarů ročně, a rozvíjející se cis-lunární ekonomiky (probíhající mezi nejvyšší vrstvou atmosféry Země a orbitou Měsíce).</p>
+                </div>
+              </div>
+              <button class="btn btn--icon absolute bottom-8 left-8" onclick="this.parentElement.classList.add('accordeon-row--open');">
+                <div class="btn__body-wrap">
+                  <div class="btn__body bg-acidgreen -bottom-20 text-black py-4">Zobrazit více</div>
+                  <div class="btn__icon bg-black">
+                    <i class="ico--chevron-right"></i>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="nase-vize" class="ideal-check"><i class="ico--check text-xs sm:text-xl text-black"></i></div>
+        <div class="ideal-inner bg-lemon content-block">
+          <h2 class="head-alt-sm md:head-alt-md mb-9">Naše vize</h2>
+          <p class="text-base">
+            <p data-block-key="urqsh">Dokážeme efektivně využít příležitostí spojených s tím, že Praha je centrem evropského kosmického programu. Český kosmický sektor získá rostoucí podíl na evropském kosmickém výzkumu i průmyslu. Firmy budou těžit z přístupu ke špičkovým technologiím a výsledkům kosmického výzkumu.</p>
+          </p>
+        </div>
+
+      </section>
+    </div>
+
+    <div id="jak-to-chceme-udelat" class="container-collapsible-content" style="height: 50vh;">
+
+      <h3 class="head-alt-base mb-8">Jak to chceme udělat?</h3>
+      <div class="content-block">
+        <p data-block-key="3bx1p"></p><ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="o40wc">Vytvoříme Národní kosmickou agenturu pro lepší koordinaci a koncentraci českých kosmických aktivit, spolupráci napříč vědeckými a vzdělávacími institucemi a průmyslem, všemi úrovněmi veřejné správy, soukromým a veřejným sektorem.</li><li class="mb-4" data-block-key="ctjd5">Prosadíme ukotvení kosmických aktivit v zákoně tak, aby mezi členy Koordinační rady pro kosmické aktivity, zejména resorty dopravy, školství a obrany, byly jasně určeny mantinely odpovědnosti za jednotlivé projekty a jejich koordinaci.</li><li class="mb-4" data-block-key="u1brp">Zrevidujeme existující podporu kosmických aktivit, zajistíme předvídatelnost jejich financování, personální zajištění a dostatečné navýšení rozpočtu na inovace. </li><li class="mb-4" data-block-key="v44a3">Zajistíme institucionální zabezpečení pro zapojení ČR do programu kosmické bezpečnosti EU (EU SST).<a href="#zdroje"><sup>[10]</sup></a><br/>Počet satelitů na oběžné dráze překračuje kapacity bezpečného kosmického provozu. S narůstajícím geopolitickým soupeřením se situace na oběžné dráze zhoršuje a je nutné ji řešit.</li><li class="mb-4" data-block-key="26kw7">Zajistíme maximální podporu spolupráce mezi Agenturou pro kosmický program EU (EUSPA), vznikající v Praze, a ESA a maximální využití geografické návratnosti našich příspěvků do ESA – ta garantuje návratnost českých příspěvků ve formě zakázek pro české firmy, a to dokonce i v oblastech, kde je český průmysl méně konkurenceschopný v porovnání se zbytkem Evropy.</li><li class="mb-4" data-block-key="e92qa">Využijeme satelitní a kosmické technologie a služby pro potřeby všech resortů.</li><li class="mb-4" data-block-key="guz9b">Podpoříme průlomové technologie<a href="#zdroje"><sup>[4]</sup></a> a rozvoj kosmických aplikací současných špičkových českých vědeckých a průmyslových kapacit, jako je umělá inteligence či laserové technologie.</li><li class="mb-4" data-block-key="o9i7s">Dohlédneme na plnění krátkodobých a dlouhodobých cílů Národního kosmického plánu a rozpočtu pro kosmické aktivity.</li><li class="mb-4" data-block-key="ns1ww">V nadnárodních organizacích se budeme aktivně účastnit plnění a formování norem pro kosmické aktivity, jako je průzkum, kolonizace či těžba nerostů ve vesmíru.</li></ul>
+      </div>
+
+      <div id="kolik-na-to-chceme-casu" class="grid grid-cols-1 gap-8 my-20">
+        
+        
+          <div class="card shadow-none bg-grey-125">
+            <div class="card__body content-block">
+              <h3 class="card-headline mb-8">Kolik na to chceme času?</h3>
+              <p class="card-body-text para"><p data-block-key="88hcn">První rok:</p><ul class="unordered-list unordered-list-acidgreen-numbers"><li data-block-key="zftmj">Kompletní revize existujících výdajů na kosmické aktivity ČR</li><li data-block-key="4myxs">Definice krátkodobých a dlouhodobých měřitelných cílů v rámci NKP</li><li data-block-key="rgwt1">Ukotvení v kompetenčním zákoně</li></ul><p data-block-key="44m0w">Druhý rok</p><ul class="unordered-list unordered-list-acidgreen-numbers"><li data-block-key="7h8sh">Zajištění dostatečného finančního a institucionálního zabezpečení</li><li data-block-key="lqra2">Zapojení ČR do programu kosmické bezpečnosti EU</li></ul><p data-block-key="rjsjg">Zbytek prvního volebního období</p><ul class="unordered-list unordered-list-acidgreen-numbers"><li data-block-key="1tbpd">Rozvoj studijních programů a akademických oborů</li><li data-block-key="3bzos">Další rozvoj agentur ESA a EU (ESA Space Solutions, ESA ESERO)</li></ul><p data-block-key="i604i">Druhé až třetí volební období</p><ul class="unordered-list unordered-list-acidgreen-numbers"><li data-block-key="8utn4">Sledování návratnosti investic</li><li data-block-key="bzxz4">Vyjednávání v rámci evropského rozpočtu</li></ul></p>
+            </div>
+          </div>
+        
+      </div>
+
+      
+        <h3 id="pro-koho-to-chceme-hlavne" class="head-alt-base mb-8 mt-20">Pro koho to chceme hlavně</h3>
+      
+
+      
+        <div class="program-detail-benefity my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8">
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/1.b701cb996af2.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro mladé</p>
+    <div class="text-sm"><p data-block-key="er4ng">Spolupráce s nadnárodními agenturami bude znamenat příležitost ke studiu nových oborů u nás i v zahraničí (Space Studies).<a href="#zdroje"><sup>[5]</sup></a></p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/2.75d99efbb2ae.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro rodiny s dětmi</p>
+    <div class="text-sm"><p data-block-key="rgsjp">Rozvoj kosmických aktivit zajistí (nejen) mladým lidem dlouhodobě udržitelná, dobře placená pracovní místa s vysokou přidanou hodnotou.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/5.b3723c211aec.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro zaměstnance</p>
+    <div class="text-sm"><p data-block-key="3gdo3">Rozvoj kosmických aktivit zajistí (nejen) mladým lidem dlouhodobě udržitelná, dobře placená pracovní místa s vysokou přidanou hodnotou.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/6.531fbb7e7cdf.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro živnostníky a podnikatele</p>
+    <div class="text-sm"><p data-block-key="zylxb">Prosperující sektor kosmického průmyslu přinese nové podnikatelské příležitosti pro širokou škálu startupů i zavedených firem.</p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/8.191fffeb5c56.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro nás pro všechny</p>
+    <div class="text-sm"><p data-block-key="ovm33">Vývoj a výzkum průlomových technologií přinese pracovní příležitosti, zvýší naši zahraniční prestiž a pomůže zajistit chod moderní ekonomiky.<a href="#zdroje"><sup>[9]</sup></a></p></div>
+  </div>
+</div>
+
+          
+            
+<div class="benefit">
+  <img src="https://www.piratiastarostove.cz/static/elections2021/images/benefits/9.754b84f78864.jpg">
+  <div class="benefit-detail bg-acidgreen">
+    <p class="head-heavy-sm w-full">Pro veřejné finance</p>
+    <div class="text-sm"><p data-block-key="64oh8">Investice do kosmického sektoru mají až desetinásobnou návratnost v horizontu 8–12 let. Dopad na veřejné finance tak bude plusový.<a href="#zdroje"><sup>[1]</sup></a></p></div>
+  </div>
+</div>
+
+          
+        </div>
+      
+
+      
+
+      
+
+      <h3 id="co-pro-to-uz-delame" class="head-alt-base mt-20 mb-10">Co pro to už děláme</h3>
+      <div class="content-block">
+        <p data-block-key="9cst7"></p><ul class="unordered-list unordered-list-checks"><li class="mb-4" data-block-key="mr6a3">Organizací seminářů a Pirateconu jsme deklarovali veřejnou politickou podporu kosmických aktivit v ČR.<a href="#zdroje"><sup>[6]</sup></a></li><li class="mb-4" data-block-key="akadz">Pravidelně se účastníme koordinačních rad ministra dopravy pro kosmické aktivity, kde si budujeme kontakty na ministerské úředníky i lidi z přidruženého průmyslu.</li><li class="mb-4" data-block-key="i8lav">V rozpočtu jsme podpořili navýšení dobrovolných příspěvků do Evropské vesmírné agentury o 275 milionů korun.<a href="#zdroje"><sup>[12]</sup></a></li><li class="mb-4" data-block-key="5a5al">V rámci Podvýboru pro letectví a kosmonautiky jsme se zúčastnili dvou ročníků Evropské meziparlamentní vesmírné konference.<a href="#zdroje"><sup>[7]</sup></a></li></ul>
+      </div>
+
+      <h3 id="na-co-se-nas-casto-ptate" class="head-alt-base mb-8 mt-20">Na co se nás často ptáte</h3>
+      <div class="space-y-1">
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">Kolik to bude stát?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="rgol5">V současné době jsou kosmické aktivity financovány cca 1,2 miliardou korun ročně z rozpočtu České republiky.<a href="#zdroje"><sup>[12]</sup></a> Navýšením dobrovolných příspěvků do Evropské vesmírné agentury v řádu stovek milionů korun ročně můžeme dosáhnout ve výsledku až desetinásobné návratnosti investic.</p><p data-block-key="ui2to">V případě zapojení ČR do dalších aktivit EU (například kosmické bezpečnosti) bude možné další investice financovat z nových i existujících programů Evropské unie,  např. NextGenerationEU či programů Horizon Europe.</p></p>
+    </div>
+  </div>
+</div>
+
+        
+          
+<div class="accordeon-row">
+  <div class="accordeon-row-head" onclick="if(this.parentElement.classList.contains('accordeon-row--open')) this.parentElement.classList.remove('accordeon-row--open'); else this.parentElement.classList.add('accordeon-row--open');">
+    <h3 class="accordeon-row-heading head-alt-xs">K čemu v ČR potřebujeme vesmírné technologie?</h3>
+    <i class="ico--chevron-down"></i>
+  </div>
+  <div class="accordeon-row-body accordeon-row-body--classic">
+    <div>
+      <p><p data-block-key="3cvac">Na vesmírných technologiích (satelity – navigace, telekomunikace) je závislá velká část moderní ekonomiky a moderních civilizačních výdobytků, ale např. také inovace v zemědělství či systémy pro rychlou odpověď při přírodních katastrofách. Více v podkladu k Národnímu konventu.<a href="#zdroje"><sup>[10]</sup></a></p></p>
+    </div>
+  </div>
+</div>
+
+        
+      </div>
+
+      
+        <h3 id="souvisejici-body" class="head-alt-base mb-8 mt-20">Související body:</h3>
+
+        <div class="carousel-card-list __js-root">
+          <ui-app inline-template>
+            <ui-carousel>
+              <!--<carousel :perPage="4" :perPageCustom="[ [200, 1], [768, 3], [1024, 4]]" :navigationEnabled="true" :navigationNextLabel="nextlabel" :navigationPrevLabel="prevlabel" class="article-card-list pt-12 pb-8">-->
+              <carousel :per-page=1 :navigation-enabled="true" class="article-card-list pb-8">
+
+                <slide>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8">
+
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/prumysl-pripraveny-na-zmeny/">Průmysl připravený na změny</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/prumysl-pripraveny-na-zmeny/"><p data-block-key="qzocx">Nezaspěme svoji chvíli! Probuďme se do technologické budoucnosti. Čtvrtá průmyslová revoluce je šancí, na které můžeme vydělat všichni.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/konec-levne-ekonomiky/">Konec levné ekonomiky</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/konec-levne-ekonomiky/"><p data-block-key="az9z9">Chceme-li své mzdy přiblížit Západu, musíme aktualizovat vlastní hospodářství. Zvyšme svoji cenu výzkumem, inovacemi a finálními výrobky.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/trh-prace-ktery-jde-naproti-lidem-i-trendum/">Trh práce, který jde naproti lidem i trendům</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/trh-prace-ktery-jde-naproti-lidem-i-trendum/"><p data-block-key="vm5qf">Pracovní trh musí stíhat společenský vývoj, včetně souladu se soukromým životem lidí a nových trendů každého oboru. Začněme už u vzdělávání!</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="https://www.piratiastarostove.cz/program/vyzkumem-a-inovacemi-na-svetovou-uroven/">Výzkumem a inovacemi na světovou úroveň</a></h1>
+                          <div class="card-body-text"><a href="https://www.piratiastarostove.cz/program/vyzkumem-a-inovacemi-na-svetovou-uroven/"><p data-block-key="modmz">Český výzkum může patřit ke světové elitě. Stačí mu vytvořit podmínky. Dejme mu průhlednou a stabilní podporu s důrazem na hodnocení kvality.</p></a></div>
+                        </div>
+                      </div>
+                      
+                          </div>
+                        </slide>
+                        <slide>
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8">
+                      
+                    
+                      <div class="card shadow-none bg-grey-125 card--hoveractive">
+                        <div class="card__body">
+                          <h1 class="card-headline mb-8"><a href="/program/kvalitni-ucitele-a-dobre-skoly/">Kvalitní učitelé a dobré školy</a></h1>
+                          <div class="card-body-text"><a href="/program/kvalitni-ucitele-a-dobre-skoly/"><p data-block-key="wjyrw">Ulehčeme školám od papírování a dejme učitelům prostor k dalšímu rozvoji. Kde jsou kapacity škol nedostačující, musí být vytvořeny nové.</p></a></div>
+                        </div>
+                      </div>
+                      
+                    
+
+                  </div>
+                </slide>
+
+              </carousel>
+            </ui-carousel>
+          </ui-app>
+        </div>
+      
+
+      <h3 id="zdroje" class="head-alt-base mb-8 mt-20">Klidně si to ověřte</h3>
+      <div class="content-block">
+        
+                    <div id="zdroj1" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[1]</div>
+                      <div class="inline-block align-top max-w-2xl">Národní kosmický plán 2020–2025. Dostupné <a class="text-fxactivecolor underline" href="https://www.czechspaceportal.cz/wp-content/uploads/2020/08/NKP2020-2025_CZ.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj2" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[2]</div>
+                      <div class="inline-block align-top max-w-2xl">Institucionální zabezpečení kosmických aktivit v ČR. 2018. Dostupné <a class="text-fxactivecolor underline" href="/documents/35/Doprava_Kosmicka_2zdroj.pdf">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj3" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[3]</div>
+                      <div class="inline-block align-top max-w-2xl">Voxpot.cz. Čína odstartovala na Měsíc: Jak totalitní moc získává náskok ve vesmíru. 24. 11. 2020. Dostupné <a class="text-fxactivecolor underline" href="https://www.voxpot.cz/cina-odstartovala-na-mesic-jak-totalitni-moc-ziskava-naskok-ve-vesmiru/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj4" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[4]</div>
+                      <div class="inline-block align-top max-w-2xl">MAKOTO HEIN, Andreas, BRUN, Juliette. 22nd INTERNATIONAL CONFERENCE ON ENGINEERING DESIGN. A conceptual framework for breakthrough technologies. Srpen 2019. Dostupné <a class="text-fxactivecolor underline" href="https://hal.archives-ouvertes.fr/hal-02265961/document">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj5" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[5]</div>
+                      <div class="inline-block align-top max-w-2xl">International Space University. Dostupné <a class="text-fxactivecolor underline" href="https://www.isunet.edu/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj6" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[6]</div>
+                      <div class="inline-block align-top max-w-2xl">Pirátské listy: Piratecon ke kosmonautice. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://www.piratskelisty.cz/clanek-2277-piratecon-ke-kosmonautice-jiz-tuto-nedeli">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj7" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[7]</div>
+                      <div class="inline-block align-top max-w-2xl">European Interparliamentary Space Conference. Dostupné <a class="text-fxactivecolor underline" href="https://eisc-europa.eu/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj8" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[8]</div>
+                      <div class="inline-block align-top max-w-2xl">National Space Society. Návratnost investic do kosmických programů. Dostupné <a class="text-fxactivecolor underline" href="https://space.nss.org/settlement/nasa/spaceresvol4/newspace3.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj9" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[9]</div>
+                      <div class="inline-block align-top max-w-2xl">Asociace pro mezinárodní otázky. NATO ve vesmíru: Český PULS pro kosmickou bezpečnost? 10. 12. 2020. Dostupné <a class="text-fxactivecolor underline" href="https://www.amo.cz/nato-ve-vesmiru-cesky-puls-pro-kosmickou-bezpecnost/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj10" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[10]</div>
+                      <div class="inline-block align-top max-w-2xl">Podkladový dokument pro jednání kulatého stolu Národního konventu o EU: Kosmické aktivity Evropské unie z pohledu ČR. 2020. Dostupné <a class="text-fxactivecolor underline" href="https://www.narodnikonvent.cz/2020/01/24/kulaty-stul_kosmickeaktivity/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj11" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[11]</div>
+                      <div class="inline-block align-top max-w-2xl">Deník.cz. Miliardové příjmy i prestiž. Česko je kosmickým srdcem Evropy. 8. 11. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://www.denik.cz/evropa-pro-cechy/cesko-je-kosmickym-srdcem-evropy-20191108.html">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj12" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[12]</div>
+                      <div class="inline-block align-top max-w-2xl">Ministerstvo dopravy. Na investice do budoucnosti ČR v kosmickém průmyslu půjde o bezmála 300 milionů Kč více než letos. 2. 12. 2019. Dostupné <a class="text-fxactivecolor underline" href="https://www.mdcr.cz/Media/Media-a-tiskove-zpravy/Na-investice-do-budoucnosti-CR-v-kosmickem-prumysl">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj13" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[13]</div>
+                      <div class="inline-block align-top max-w-2xl">Seznam Zprávy. Vláda začala s vyhazovy politiků ČSSD a lidovců. Náměstci se diví, že jim nikdo nic neřekl. 22. 12. 2017. Dostupné <a class="text-fxactivecolor underline" href="https://www.seznamzpravy.cz/clanek/vlada-zacala-s-vyhazovy-politiku-cssd-a-lidovcu-namestci-se-divi-ze-jim-nikdo-nic-nerekl-41034">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj14" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[14]</div>
+                      <div class="inline-block align-top max-w-2xl">Úřad vlády ČR. Zápis z Rady pro výzkum, vývoj a inovace. 2016. Dostupné <a class="text-fxactivecolor underline" href="https://www.vyzkum.cz/FrontClanek.aspx?idsekce=766324&amp;ad=1&amp;attid=796883">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj15" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[15]</div>
+                      <div class="inline-block align-top max-w-2xl">ESA Business Incubation Centre Prague – podnikatelský inkubátor se zaměřením na inkubaci a rozvoj technologicky progresivních startupů, které ve svých komerčních produktech či službách využívají vesmírné technologie nebo systémy. Dostupné <a class="text-fxactivecolor underline" href="https://www.esa-bic.cz/">zde</a>.</div>
+                    </div>
+                    
+                    <div id="zdroj16" class="source leading-loose text-sm">
+                      <div class="inline-block align-top w-9 text-fxactivecolor">[16]</div>
+                      <div class="inline-block align-top max-w-2xl">BusinessInfo.cz. Firma OHB Czechspace se stává součástí mise planetární obrany Hera. 15. 12. 2020. Dostupné <a class="text-fxactivecolor underline" href="https://www.businessinfo.cz/clanky/firma-ohb-czechspace-se-stava-soucasti-mise-planetarni-obrany-hera/">zde</a>.</div>
+                    </div>
+                    
+        <div id="zdroj17" class="source leading-loose text-sm">
+          <div class="inline-block align-top w-9 text-fxactivecolor">[17]</div>
+          <div class="inline-block align-top max-w-2xl">BREJLOVÁ, Iva. Na vesmírných experimentech na ISS se bude poprvé podílet česká firma. SAB Aerospace projekty na ISS. Dostupné <a class="text-fxactivecolor underline" href="https://www.euro.cz/veda/na-vesmirnych-experimentech-na-iss-se-bude-poprve-podilet-ceska-firma-sab-aerospace-pripravuje-projekty-jako-z-filmu">zde</a>.</div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="container-collapsible-button-container w-full">
+      <button class="container-collapsible-button btn btn--icon text-lg block mx-auto" onclick="this.parentElement.parentElement.classList.add('container-collapsible-open');">
+        <div class="btn__body-wrap">
+          <div class="btn__body py-8 leading-4">Zobrazit více</div>
+          <div class="btn__icon px-8 bg-grey-800 border-grey-500">
+            <i class="ico--chevron-right"></i>
+          </div>
+        </div>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  /*should run once on any page accordeon rows with fadeouts are present*/
+  document.addEventListener("DOMContentLoaded", setMaxHeightsFadeouts);
+  window.addEventListener('resize', setMaxHeightsFadeouts);
+
+  function setMaxHeightsFadeouts() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--fadeout');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = (parseInt(accordeonRowBodies[i].scrollHeight) + 32) + "px";
+      }; /*plus padding*/
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setMaxHeights);
+  window.addEventListener('resize', setMaxHeights);
+
+  function setMaxHeights() {
+    // set height for css transition
+    var accordeonRowBodies = document.getElementsByClassName('accordeon-row-body--classic');
+
+    if (accordeonRowBodies !== null) {
+      for (var i = 0; i < accordeonRowBodies.length; i++) {
+        accordeonRowBodies[i].style.maxHeight = accordeonRowBodies[i].scrollHeight + "px";
+      };
+    }
+  }
+</script>
+
