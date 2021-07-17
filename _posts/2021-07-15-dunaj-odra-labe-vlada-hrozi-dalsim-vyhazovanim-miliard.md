@@ -4,7 +4,7 @@ category:     blog
 tags:         dol obchod-a-průmysl vodní-doprava
 layout:       post
 title:        "Vláda připravuje mezinárodní smlouvu, která míří k výstavbě kanálu Dunaj–Odra–Labe. Odmítáme vyhazování miliard za megalomanský projekt"
-image:        posts/dol03.jpg
+image:        posts/dol03.png
 author:       Dana Balcarová
 ---
 
