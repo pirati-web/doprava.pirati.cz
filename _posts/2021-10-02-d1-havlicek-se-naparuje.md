@@ -4,7 +4,7 @@ category:     blog
 tags:         silniční-doprava dálnice
 layout:       post
 title:        "Další potěmkiáda vlády – dvojministr Havlíček před volbami slavnostně otevře nedokončený úsek dálnice D1 "
-image:        /assets/img/articles/2021/Ivan_bartos99.jpg
+image:        posts/Ivan_bartos99.jpg
 author:       
 ---
 
