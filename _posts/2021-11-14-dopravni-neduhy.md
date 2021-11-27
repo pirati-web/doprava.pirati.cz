@@ -9,7 +9,7 @@ tags:
     - doprava
     - jiri-duchacek
 author: Piráti Pardubického kraje
-image: posts/duchy_cov5.png
+image: posts/duchy_p2.png
 ---
 
 **Málokteré téma rezonuje mezi lidmi tak často, jako dopravní situace. O té diskutují nejen sami cestující, kteří se přepravují do škol nebo do zaměstnání, ale také řidiči osobních i nákladních automobilů. Existují však řešení, která by mohla současnou situaci zlepšit nebo alespoň následky negativních dopadů zmírnit?**
