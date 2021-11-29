@@ -5,8 +5,7 @@ title: Dopravní situace v kraji trpí několika neduhy
 date: 2021-11-14T14:00:00+0200
 tags: 
     - pardubický-kraj
-    - výbory
-    - doprava
+    - silniční-doprava 
     - jiri-duchacek
 author: Piráti Pardubického kraje
 image: posts/duch_p2.png
