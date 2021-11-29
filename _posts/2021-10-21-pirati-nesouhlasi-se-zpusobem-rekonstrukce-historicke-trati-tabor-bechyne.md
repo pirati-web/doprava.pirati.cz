@@ -11,7 +11,7 @@ description: 'Krajští zastupitelé na posledním zasedání zastupitelstva př
 tags:
   - jihočeský-kraj
   - lokálky
-  - železniční-doprava
+  - drážní-doprava
   - historické-železnice
 ---
 **Krajští zastupitelé na posledním zasedání zastupitelstva přijali usnesení, které podle názoru Pirátů ohrožuje provoz historických vlaků na trati Tábor - Bechyně.**
