@@ -19,3 +19,4 @@ Změna územního plánu již byla schválena před časem zastupitelstvem hlavn
 Od rychlotrati do Kladna si Praha slibuje i možné snížení koncentrace aut v Praze a snížení dopadu na obsazení parkovacích míst v metropoli, protože předpokládá, že obyvatelé Středočeského kraje k přesunu do metropole využijí spíše rychlejší, ekologičtější i ekonomičtější alternativy cestování.
 
 [Trasa traté](https://doprava.pirati.cz/assets/img/posts/trasa_letiste_VH.jpg) 
+![Trasa traté](https://doprava.pirati.cz/assets/img/posts/trasa_letiste_VH.jpg) 
