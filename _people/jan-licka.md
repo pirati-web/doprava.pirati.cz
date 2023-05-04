@@ -6,8 +6,6 @@ titles:
   after:
 category:
   - kraj
-  - vedouci
-  - garant
   - expert-doprava
 description: krajský zastupitel, místopředseda Výboru pro dopravu
 ordKraj: 10
