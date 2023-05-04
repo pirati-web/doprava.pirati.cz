@@ -5,8 +5,6 @@ titles:
   before:
   after:
 category:                 	# kategorie: rp, praha, vary, hradec, jmk, senat
-- psp
-- garant
 - kandidat-vlada
 
 img: people/ondrej-polansky.jpg   # 165 x 220
