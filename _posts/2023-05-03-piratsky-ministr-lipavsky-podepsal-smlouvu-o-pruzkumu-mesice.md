@@ -1,7 +1,7 @@
 ---
 date:         2023-05-03
 category:     blog
-tags:         mzv Lipavský měsíční-mise 
+tags:         vesmír ostatní doprava Lipavský měsíční-mise 
 layout:       post
 title:        "Ministr zahraničních věcí ČR Jan Lipavský při návštěvě USA podepsal ujednání o průzkumu měsíce" 
 image:        posts/moon-treaty.jpeg
