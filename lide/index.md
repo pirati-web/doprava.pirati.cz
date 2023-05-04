@@ -16,7 +16,7 @@ keywords: doprava, odbor, piráti, pirátky, příznivci
                     <div class="c-BasicPage">
                         <div class="c-BasicPage-content">
  
-                                  <a href="#garant" ><h3>VEDOUCÍ RESORTU DOPRAVA - KANDIDÁT NA MINISTRA</h3></a>
+                                  <a href="#garant" ><h3>VEDOUCÍ RESORTU DOPRAVA</h3></a>
                                     <div id="garant"  >
                                         {% assign team = site.people | where_exp:"item","item.categories contains 'garant'" | sort:"ordgarant" %}
                                         {% include people/list-2col.html param=team %}
