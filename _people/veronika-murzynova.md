@@ -13,6 +13,8 @@ category:                 	# kategorie: kandidat, pks, zastupitel
 - expert-média
 - expert-doprava
 - kontakt
+- garant
+- vedoucí
 
 
 img: people/veronika-murzynova.jpg   # 165 x 220
